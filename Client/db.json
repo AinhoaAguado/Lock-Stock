@@ -1,0 +1,439 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "Id_User": "223e4567-e89b-12d3-a456-426614174002",
+      "Password_User": "clave567",
+      "Password_Master_User": "claveMaster789",
+      "Email_User": "user@hotmail.com",
+      "Name_User": "Facebook",
+      "SurName_User": "Apellido2",
+      "Mobile_User": 987654321,
+      "Question_Security_User": "¿Cuál es el nombre de tu primera mascota?",
+      "Answer_Security_User": "Toby",
+      "Device_User": "Android",
+      "Notifications_User": "Inactivas",
+      "Block_User": true,
+      "Delete_User": false,
+      "Name_Aplication": "Facebook",
+      "Password_Aplication": "1234567"
+    },
+    {
+      "id": "2",
+      "Id_User": "223e4567-e89b-12d3-a456-426614174002",
+      "Password_User": "clave567",
+      "Password_Master_User": "claveMaster789",
+      "Email_User": "usuario2@example.com",
+      "Name_User": "Usuario2",
+      "SurName_User": "Apellido2",
+      "Mobile_User": 987654321,
+      "Question_Security_User": "¿Cuál es el nombre de tu primera mascota?",
+      "Answer_Security_User": "Toby",
+      "Device_User": "Android",
+      "Notifications_User": "Inactivas",
+      "Block_User": true,
+      "Delete_User": false
+    },
+    {
+      "id": "3",
+      "Id_User": "323e4567-e89b-12d3-a456-426614174003",
+      "Password_User": "miClaveSecreta",
+      "Password_Master_User": "claveMaestraSecreta",
+      "Email_User": "usuario3@example.com",
+      "Name_User": "usuario7",
+      "SurName_User": "Apellido3",
+      "Mobile_User": 987654321,
+      "Question_Security_User": "¿Cuál es tu película favorita?",
+      "Answer_Security_User": "El Padrino",
+      "Device_User": null,
+      "Notifications_User": "Activas",
+      "Block_User": false,
+      "Delete_User": true
+    }
+  ],
+  "Devices_User": [
+    {
+      "id": "1",
+      "Id_Device": "234f5678-f89c-23e4-b567-526715275002",
+      "Name_Device": "aplicacion editada",
+      "Date_Register_Device": "contacto@aplicacion1.com",
+      "Date_Last_Conexion_Device": "Productividad",
+      "Status_Device": "1234567",
+      "Ip_Direction_Device": "123e4567-e89b-12d3-a456-426614174000",
+      "Sistem_Operative_Device": "bryam@gmail.com",
+      "Id_USer": "william",
+      "Name_Aplication": "Facebookd",
+      "Email_User": "user@hotmail.com",
+      "Name_User": "Facebook",
+      "Password_Aplication": "1234567"
+    }
+  ],
+  "Notifications_User": [
+    {
+      "id_Notification": "1",
+      "Notes_Notification": [
+        "mensaje 1",
+        "mensaje 2",
+        "mensaje 3"
+      ],
+      "id_User": "1"
+    }
+  ],
+  "Aplications_User": [
+    {
+      "id": "1",
+      "Id_Aplications": "1",
+      "Name_Aplication": "Facebook",
+      "Email_Aplication": "user@hotmail.com",
+      "Category_Aplication": "social",
+      "Password_Aplication": "password",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000",
+      "Email_User": "user@hotmail.com",
+      "Name_User": "Facebook"
+    },
+    {
+      "id": "2",
+      "Id_Aplications": "1",
+      "Name_Aplication": "YouTube",
+      "Email_Aplication": "user2@hotmail.com",
+      "Category_Aplication": "videos",
+      "Password_Aplication": "1234567",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "3",
+      "Id_Aplications": "2",
+      "Name_Aplication": "Instagram",
+      "Email_Aplication": "user3@hotmail.com",
+      "Category_Aplication": "social",
+      "Password_Aplication": "password3",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "4",
+      "Id_Aplications": "2",
+      "Name_Aplication": "Twitter",
+      "Email_Aplication": "user4@hotmail.com",
+      "Category_Aplication": "social",
+      "Password_Aplication": "password4",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "5",
+      "Id_Aplications": "1",
+      "Name_Aplication": "YouTube",
+      "Email_Aplication": "user2@hotmail.com",
+      "Category_Aplication": "videos",
+      "Password_Aplication": "1234567",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "6",
+      "Id_Aplications": "3",
+      "Name_Aplication": "Snapchat",
+      "Email_Aplication": "user6@hotmail.com",
+      "Category_Aplication": "social",
+      "Password_Aplication": "password6",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "7",
+      "Id_Aplications": "4",
+      "Name_Aplication": "WhatsApp",
+      "Email_Aplication": "user7@hotmail.com",
+      "Category_Aplication": "messaging",
+      "Password_Aplication": "password7",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "8",
+      "Id_Aplications": "4",
+      "Name_Aplication": "Telegram",
+      "Email_Aplication": "user8@hotmail.com",
+      "Category_Aplication": "messaging",
+      "Password_Aplication": "password8",
+      "Id_User": "123e4567-e89b-12d3-a"
+    }
+  ],
+  "modal": [
+    {
+      "response": true
+    },
+    {
+      "id": "bda7",
+      "response": "$2a$10$kw62C.ThuR4k2UicH7h3f.nMrplHWgmQhagDy3wdS.6SKO0hM1OWm"
+    },
+    {
+      "id": "ef4b",
+      "response": "$2a$10$6QQ5hi1mquv9NpjrxJjpFOvDXoUwr9zNny2S1bTjtsddy4Kf0JDr6"
+    },
+    {
+      "id": "38bb",
+      "response": "$2a$10$SPK5VxR63MfKA324wCSDqevGsqCp6mVJk1zxw8M74GONx0ITRvJsi"
+    },
+    {
+      "id": "4f5b",
+      "response": "$2a$10$/4Lr0370jtBZ4VW5rElvROGcYShvHlGM42O.ZKGEWnXYFnzlLz5J."
+    },
+    {
+      "id": "7171",
+      "response": "$2a$10$0.I/pj9OcnGpVLGqju7BeuNmQGthCFiErFbYDz2AP4sdMI5mXHD9a"
+    },
+    {
+      "id": "2644",
+      "response": "$2a$10$UF.MXRx79XMrtHUOGrBDi.zfhdImVB4sDnRE1.3Sjxx7j1WQ7E71O"
+    },
+    {
+      "id": "15ca",
+      "response": "$2a$10$j3U0clSAbhZplJQXuwzHWuix8Th.T1EMoLJx.6cDfF3QnRv5P9hOu"
+    },
+    {
+      "id": "6eec",
+      "response": "$2a$10$LdvHADEPdl3mgGg3JUzzAudkcOPgL.CYWqzGCsdI6M6leh99QF3Su"
+    },
+    {
+      "id": "f73e",
+      "response": "$2a$10$l2UPkY2xRgovYMqDqNYjYOfgRcVfQ3TW0PvX3fW/7H9rbragpED72"
+    },
+    {
+      "id": "8b59",
+      "response": "$2a$10$JPBu9h1moAH0LOKKFsZam.kDc/IJ.YsOvUq2pvc4CwuoZm7zwKCPu"
+    },
+    {
+      "id": "8761",
+      "response": "$2a$10$gxcyekQkoPx8up1r2MdB7ubT4P3Zx6CgChP/jsZ3ZF1bzLh05/4UK"
+    },
+    {
+      "id": "7da8",
+      "response": "$2a$10$.Rk1q7TGCQ/xLYgn1mY7yOqTb3WmHCNeog6ArkAAFw/JRIJFkZZNe"
+    },
+    {
+      "id": "6296",
+      "response": "$2a$10$egAUpdleL6gnU.eqFKCYP.kQTKA8w0lMZj.xpPddw0nTe52ATPkKi"
+    },
+    {
+      "id": "e599",
+      "response": "$2a$10$5yJpY0gtRLQxAYUZsLZOm.Yq2cuzODgRW0FRH4Sz0jCpLIGEj0ANe"
+    },
+    {
+      "id": "60ad",
+      "response": "$2a$10$W9N1RnFz3ZLdTiMwfkyYbewp6IAbXzmt8sAZq1JzVChM2l.DGK72a"
+    },
+    {
+      "id": "f338",
+      "response": "$2a$10$PS1juRuRDH3JH2uRwMTtfuSQfr4NiiZMzK48MTLEZxeqXTBNzC6IW"
+    },
+    {
+      "id": "f76b",
+      "response": "$2a$10$s0VaMs1ke062i/wLzvNLi.lLyta0iypj9zrpAyyoJzT0Eh1utPRfu"
+    },
+    {
+      "id": "8d5c",
+      "response": "$2a$10$/Q8pADmqZHp.xTsGsZnEoeNv5Vqi4DCrF7SDdhbAWvq0R3N7V2VN."
+    },
+    {
+      "id": "3ea8",
+      "response": "$2a$10$OIEQqCeCW9Dppdz2AK65NOKPMDj6xOkDmpqvNWoegOfd3Wjd4CgmO"
+    },
+    {
+      "id": "a6c8",
+      "response": "$2a$10$/oiLkDj4mf58l226NCCrq.7xL32INoHFIhr7ROvyjXwnQfE/BJaGe"
+    },
+    {
+      "id": "4070",
+      "response": "$2a$10$1r60XPMBSdRynOfRJ/F0QeROXvyy84XAqt8g7SfUpD9o0mADJ60/G"
+    },
+    {
+      "id": "accb",
+      "response": "$2a$10$wTSOBnpK8Xd5nUE8sLl.xe/KXeuNxQhtowEP0GJnxjEIV2Y7WVByq"
+    },
+    {
+      "id": "da5f",
+      "response": "$2a$10$AhIWVoWVxH3NO4qlim2txeXut9PHqbl6UJK5C2J1PXkxlI19VW6ri"
+    },
+    {
+      "id": "2bed",
+      "response": "$2a$10$gxKjneGOCk4cIlLRlRr/guoPeDU1f47OHHV5tYZ0nWJ8Fe7ImPuy6"
+    },
+    {
+      "id": "894d",
+      "response": "$2a$10$yBjY894KK/gKs1So0JxOn.bYrNQgqQLmnBWTEkopw2fdb9fO1EuGC"
+    },
+    {
+      "id": "5e3b",
+      "response": "$2a$10$MwBIivLy2TsZY6DOay074uydMvXLaNzE5yWIMo01H33ofG.J92Erm"
+    },
+    {
+      "id": "6db6",
+      "response": "$2a$10$uorH9S5GA/UlEpD4rUffFuIVS8Wy4h4bbeqN41h0/nsKe69h1sPIS"
+    },
+    {
+      "id": "960a",
+      "response": "$2a$10$fuF9DWleCwgXHe3J0g6KNehkI3rSW8gnuc8/N6AyyuBb8h7qiLtyK"
+    },
+    {
+      "id": "3c6f",
+      "response": "$2a$10$P0/io2HepycKtJ5rT3BO..1vZ8YQ1.j4FoldUcijTowuLd6DYw4qa"
+    },
+    {
+      "id": "a831",
+      "response": "$2a$10$bHK7mqs3hK9QtCWx4J8KM.vn5KYnZNnFyHqbOuy9RfCqCLCUl9Cx2"
+    },
+    {
+      "id": "6012",
+      "response": "$2a$10$0/REvTIeD03.i.FrdnnzlelS4ktyAhR2ycLsyUJlr69TTiuvTESfK"
+    },
+    {
+      "id": "977d",
+      "response": "$2a$10$b94N5cGgrU.R1GBisCGJVOV3SFMhLXRtEB1UfnTb0JNIltT61DfI."
+    },
+    {
+      "id": "caa1",
+      "response": "$2a$10$2H1tghIifuSJwVkCO5.P2uQ17/cpXxgzFJ/TxnnzMtcI7N3j6FkBC"
+    },
+    {
+      "id": "28ce",
+      "response": "$2a$10$PKS.8AEVWYMZW8gIZ1KGzOON4M7hSFE.RX/zBy93GIk/l0asCIP8O"
+    },
+    {
+      "id": "6d49",
+      "response": "$2a$10$lC7dx0UJ5.uf5e7kx/3dseF6JJSKJOlEb92NnJIRigQ7UGQye01C6"
+    },
+    {
+      "id": "6201",
+      "response": "$2a$10$uwrgWWcu5SP5rJ1oCuinxORmwXUjsIyjKpE9tDRDv67/8AvHlRXOi"
+    },
+    {
+      "id": "e54e",
+      "response": "$2a$10$NvmhJLPwd8DYKX291t4Q0O9vIBRuw03P5GmZw80Pvkhv2J7RwIvES"
+    },
+    {
+      "id": "0f51",
+      "response": "$2a$10$bBxEibuTro6WD9jNt6Cne.n4yy/9hAZzm08rMwSop5ASkDUVpCDwC"
+    },
+    {
+      "id": "c7e4",
+      "response": "$2a$10$HoIw3oEaidq/1wR7i5qS0eHwRO3q5FCACiu5YcIpPkySEFZtbA7TS"
+    },
+    {
+      "id": "cd21",
+      "response": "$2a$10$0mYYlAh5dqyo.6MS38MIiefJ36wQKBFL0UyT/pkYWC3JDDzhP16dW"
+    },
+    {
+      "id": "1f44",
+      "response": "$2a$10$N5OrG4vVo.HQIJqpJXcZpeGt13h5S/Jl5fgyzhwAdO4A6NqDHFosa"
+    },
+    {
+      "id": "06c9",
+      "response": "$2a$10$SYuj2L.XR8iG/ADAPXZXnO6qJWScwpP9HJ3HxU8Bx0EFQsV/dGfmC"
+    },
+    {
+      "id": "7d53",
+      "response": "$2a$10$MFAJiAXbb0wK1jP2oGLS5.D/WJg/Y1m7v/OPTsM5bBbAofDVNTLl."
+    },
+    {
+      "id": "0d57",
+      "response": "$2a$10$3vrTQ3cXNtD/cORJwrEgp.1AUpecB8IQwYYyDNcUzIjxMDLw5xf0K"
+    },
+    {
+      "id": "9677",
+      "response": "$2a$10$TWCoBA0uFoMrStVpzycLw.IhcOhUOPV7oV8EJhcetCNCC3N6201HC"
+    },
+    {
+      "id": "22a2",
+      "response": "$2a$10$81b/SQGyYxUVv0DizmzRbebJdJ6Oj0X0ViAdIhdO8EvFAUq3UxOIi"
+    },
+    {
+      "id": "ee05",
+      "response": "$2a$10$20s8jE73L66i.iSQj5MqeOaj0KxoPFdumj9hRagX1j5cKBTz9nuVm"
+    },
+    {
+      "id": "01bb",
+      "response": "$2a$10$dsTeIxKVzdYedTHGiRaenO9HvW5JbJ4Y5pM2hCuOJL7lfd/LWMBJi"
+    },
+    {
+      "id": "496f",
+      "response": "$2a$10$WKqgSxsAf94Lir.lciI6teYz5prPN7UVLzY6eVKW8yd79dT9oLCnu"
+    },
+    {
+      "id": "9d31",
+      "response": "$2a$10$epopAS84ReN7obL02gPtlOQmZc38ngFj1UIVkAkGXBu5kHSr/Bn22"
+    },
+    {
+      "id": "a932",
+      "response": "$2a$10$C8xuLjTmECwllUCVsnW5r.0zh0Vk9lrgsrcPZQXi.YnfAmTIgAybq"
+    },
+    {
+      "id": "1"
+    },
+    {
+      "id": "1"
+    },
+    {
+      "id": "1"
+    },
+    {
+      "id": "3"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "1"
+    },
+    {
+      "id": "3"
+    },
+    {
+      "id": "09dd",
+      "response": "$2a$10$/eFkSwb22Y/NxaTatCbFneK8cfrOYVxzrOKuQo6ZDR0D2sylXVBVa"
+    },
+    {
+      "id": "e20d",
+      "response": "$2a$10$zQg6fuNE13V0cjnhOwCrReor9ZUk86mjLFqPX8vL6jtdI.wyie5V2"
+    },
+    {
+      "id": "1"
+    },
+    {
+      "id": "1"
+    },
+    {
+      "id": "3"
+    },
+    {
+      "id": "a281",
+      "response": "$2a$10$mfr2RAG45TF330D1WmmCCOVZAS7Xk7wVRMMS9rb8QXPEE9VvJS2ce"
+    },
+    {
+      "id": "0be2",
+      "response": "$2a$10$70pKwgDd5V31Ei6gLBtfC.ja.rGk8MytUZQjAxzkrckL4/hE2UNpG"
+    },
+    {
+      "id": "1"
+    },
+    {
+      "id": "3bff",
+      "response": "$2a$10$zJnd3d5Xf4Jls7Co/1RVKOidGK5iYYQu/6TehwonIkKwg0BXVUEjC"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "4"
+    },
+    {
+      "id": "647f",
+      "response": "$2a$10$LROrjlTqVnYdEZoZlsBDLeg7sqAq61SOYQ8.f8Pl3emXz7sMtEpNG"
+    },
+    {
+      "id": "1"
+    }
+  ]
+}
