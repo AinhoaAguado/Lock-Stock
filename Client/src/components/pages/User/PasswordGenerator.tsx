@@ -8,9 +8,10 @@ import { hashData } from "../../../services/hash";
 
 
 const PasswordGenerator = (): React.JSX.Element => {
-  // const id = "2";
 
+  //obtener id de cuenta
   let { id } = useParams();
+
 
   // ver contraseña
   const [view, setView] = useState("password");
@@ -18,28 +19,34 @@ const PasswordGenerator = (): React.JSX.Element => {
     view === "password" ? setView("text") : setView("password");
   };
 
+
+
   // actualizar datos
   const editDataAplication = async (data) => {
     try {
-      const {} = data;
+      //destructuring
+      const {Name_Aplication, Email_Aplication, Name_User, Password_Aplication} = data;
 
-      const newData = {};
+    
 
-      console.log(data)
+      //objeto
+      const newData = {
+        Name_Aplication: await hashData(Name_Aplication),
+        Email_Aplication: await hashData(Email_Aplication),
+        Name_User: await hashData(Name_User),
+        Password_Aplication: await hashData(Password_Aplication)
+      };
 
-      
+      //enviar
+      await servicesApp.putAccountUser(newData);
+      console.log(newData)
 
-      // await servicesApp.postAplications(newData);
-
-      console.log(data);
     } catch (error) {
       if (error instanceof Error) {
-        throw new Error();
+        throw new Error(error.message);
       }
     }
   };
-
-  // cancelar nuevos datos y recuperar los antiguos
 
   const {
     register,
@@ -48,19 +55,36 @@ const PasswordGenerator = (): React.JSX.Element => {
   } = useForm();
 
 
-
+  //datos de cuentas
   const { response } = useLoaderData();
-  console.log(response)
 
+  //filtrar cuenta por el id
   const filterAplication = response.find((a: { Id_Aplications: string }) => {
     return a.Id_Aplications === id;
   });
 
+  
+
+  // sin id comienza con un objeto vacio
   const aplication = filterAplication || {}
 
+
+  const [value, setValue] = useState(false);
+
+useEffect(() => {
+  if (!id) {
+    setValue(true);
+  }
+}, [id]);
+
+
+  // boton cancelar
   const cancelarEdit = () => {
     window.location.reload();
   };
+
+
+
 
   // generar contraseña
   function generarLetraAleatoria() {
@@ -164,7 +188,11 @@ const PasswordGenerator = (): React.JSX.Element => {
     setgeneratePassword(contraseña);
   };
 
-  // copiar input
+
+
+
+
+  // boton de copiar
   const [textPassword, setTextPassword] = useState(
     aplication.Password_Aplication
   );
@@ -178,16 +206,6 @@ const PasswordGenerator = (): React.JSX.Element => {
 
 
 
-
-
-  //cambiar titulo
-  const [value, setValue] = useState(false);
-
-useEffect(() => {
-  if (!id) {
-    setValue(true);
-  }
-}, [id]);
 
 
   return (

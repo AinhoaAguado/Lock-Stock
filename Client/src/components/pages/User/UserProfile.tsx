@@ -13,15 +13,24 @@ const UserProfile = (): React.JSX.Element => {
   // sessionStorage.setItem('token', 'hola mundo');
   // let token = sessionStorage.getItem('token');
 
+
+
+
+
+  //datos de usuario
+  const user = useContext(usersContext);
+
+
+  //editar perfil
+
+  const [ edit, setEdit ] = useState(false);
+
   const [name, setName] = useState(false);
   const [lastName, setLastName] = useState(false);
   const [email, setEmail] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [nameUser, setNameUser] = useState(false);
 
-  const user = useContext(usersContext);
-
-  //editar perfil
   const nameRef = useRef(null);
   const lastNameRef = useRef(null);
   const emailRef = useRef(null);
@@ -34,20 +43,17 @@ const UserProfile = (): React.JSX.Element => {
         { [fieldName]: `${ref.current.textContent}` },
         user.id
       );
+
+      setModal('flex')
+
     } catch (error) {
       console.error(`Error al editar ${fieldName}:`, error);
     }
   };
 
 
-
-
-
-
+  //modal 
   const [ modal, setModal ] = useState('hidden');
-  const [ edit, setEdit ] = useState(false);
-
-
 
   const changeModalVisibility = async () => {
     setModal((prevModal) => (prevModal === "hidden" ? "fixed" : "hidden"));
@@ -57,25 +63,19 @@ const UserProfile = (): React.JSX.Element => {
   const postConfirmPassword = async (data: FieldValues) => {
     try {
       const { passwordMaster } = data;
-      const newData = await hashData(passwordMaster);
+
       const response = await servicesApp.postModal({
-        response: newData
+        password: await hashData(passwordMaster)
       })
 
 
-      console.log(response)
-
       if (response) {
+        setEdit(true)
         setModal((prevModal) => (prevModal === "hidden" ? "fixed" : "hidden"));
-
-
-
         setTimeout(()=>{
-
-        },1*60*1000)
-
+          setEdit(false)
+        },1*60*5000)
       }
- 
 
     } catch (error) {
       if (error instanceof Error) {
@@ -84,6 +84,13 @@ const UserProfile = (): React.JSX.Element => {
     }
   };
 
+
+
+
+
+  
+
+  
 
   return (
     <>
@@ -105,48 +112,78 @@ const UserProfile = (): React.JSX.Element => {
             </article>
             <article className="flex-col w-1/2">
               <table className="w-full h-full ">
-                <tr>
-                  <td className="font-semibold">Nombre</td>
 
-                  <td className="" contentEditable={name} ref={nameRef}>
-                    {user.Name_User}
-                  </td>
 
-                  <td className="flex gap-3 h-full w-full items-center">
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"                         onClick={() => setName(!name)}
->
-                      <img
-                        src="/src/images/editar-icon.svg"
-                        alt="edit-icon"
-                      />
-                    </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"                         onClick={() => {
-                          editProfile(nameRef, "Name_User");
-                          setName(!name);
-                        }}
->
-                      <img
-                        src="/src/images/check-icon.svg"
-                        alt="edit-icon"
-                      />
-                    </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center">
-                      <img
-                        src="/src/images/eliminar-icon.svg"
-                        alt="delete-icon"
-                        className="cursor-pointer hover:bg-primary rounded"
-                      />
-                    </figure>
-                  </td>
-                </tr>
+
+
+
+
+
+
+
+
+              <tr>
+  <td className="font-semibold">Nombre</td>
+
+  <td className="" contentEditable={name} ref={nameRef}>
+    {user.Name_User}
+  </td>
+
+  <td className="flex gap-3 h-full w-full items-center">
+    <figure
+      className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
+      onClick={() => {
+        edit ? setName(!name) : setModal('fixed');
+      }}
+    >
+      <img src="/src/images/editar-icon.svg" alt="edit-icon" />
+    </figure>
+
+    <figure
+      className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
+      onClick={() => {
+        if (edit) {
+          editProfile(nameRef, "Name_User");
+          setName(!name);
+        } else {
+          setModal('fixed');
+        }
+      }}
+    >
+      <img src="/src/images/check-icon.svg" alt="edit-icon" />
+    </figure>
+
+    <figure
+      className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
+      onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}
+    >
+      <img
+        src="/src/images/eliminar-icon.svg"
+        alt="delete-icon"
+        className="cursor-pointer hover:bg-primary rounded"
+      />
+    </figure>
+  </td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
 
                 <tr>
                   <td className="font-semibold">Apellidos</td>
                   <td contentEditable={lastName}>{user.SurName_User}</td>
                   <td className="flex gap-3 h-full w-full items-center">
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"                         onClick={() => setLastName(!lastName)}
+                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"                         onClick={() => {edit?setLastName(!lastName):setModal('fixed')}}
 >
                       <img
                         src="/src/images/editar-icon.svg"
@@ -155,8 +192,13 @@ const UserProfile = (): React.JSX.Element => {
                     </figure>
 
                     <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"                         onClick={() => {
-                          editProfile(lastNameRef, "SurName_User");
-                          setLastName(!lastName);
+                      if (edit) {
+                        editProfile(lastNameRef, "SurName_User");
+                        setLastName(!lastName);
+                      }else{
+                        setModal('fixed')
+                      }
+                       
                         }}
 >
                       <img
@@ -165,7 +207,8 @@ const UserProfile = (): React.JSX.Element => {
                       />
                     </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center">
+                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center" 
+                    onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}>
                       <img
                         src="/src/images/eliminar-icon.svg"
                         alt="delete-icon"
@@ -173,13 +216,28 @@ const UserProfile = (): React.JSX.Element => {
                     </figure>
                   </td>
                 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <tr>
                   <td className="font-semibold">Correo Electrónico</td>
                   <td contentEditable={email}>{user.Email_User}</td>
 
                   <td className="flex gap-3 h-full w-full items-center">
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"                         onClick={() => setEmail(!email)}
+                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"                         onClick={() => {edit?setEmail(!email):setModal('fixed')}}
 >
                       <img
                         src="/src/images/editar-icon.svg"
@@ -188,8 +246,13 @@ const UserProfile = (): React.JSX.Element => {
                     </figure>
 
                     <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center" onClick={() => {
-                          editProfile(emailRef, "Email_User");
-                          setEmail(!email);
+                      if (edit) {
+                        editProfile(emailRef, "Email_User");
+                        setEmail(!email);
+                      } else {
+                        setModal('fixed')
+                      }
+                      
                         }}>
                       <img
                         src="/src/images/check-icon.svg"
@@ -198,7 +261,9 @@ const UserProfile = (): React.JSX.Element => {
                       />
                     </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center">
+                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
+                    onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}
+                    >
                       <img
                         src="/src/images/eliminar-icon.svg"
                         alt="delete-icon"
@@ -207,11 +272,21 @@ const UserProfile = (): React.JSX.Element => {
                   </td>
                 </tr>
 
+
+
+
+
+
+
+
+
+
+
                 <tr>
                   <td className="font-semibold">Teléfono Móvil</td>
                   <td contentEditable={mobile}>{user.Mobile_User}</td>
                   <td className="flex gap-3 h-full w-full items-center">
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center" onClick={() => setMobile(!mobile)}>
+                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center" onClick={() => {edit?setMobile(!mobile):setModal('fixed')}}>
                       <img
                         src="/src/images/editar-icon.svg"
                         alt="edit-icon"
@@ -220,8 +295,12 @@ const UserProfile = (): React.JSX.Element => {
                     </figure>
 
                     <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center" onClick={() => {
-                          editProfile(mobileRef, "Mobile_User");
-                          setMobile(!mobile);
+                      if (edit) {
+                        editProfile(mobileRef, "Mobile_User");
+                        setMobile(!mobile); 
+                      } else {
+                        setModal('fixed')
+                      }
                         }}>
                       <img
                         src="/src/images/check-icon.svg"
@@ -230,7 +309,9 @@ const UserProfile = (): React.JSX.Element => {
                       />
                     </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center">
+                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
+                    onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}
+                    >
                       <img
                         src="/src/images/eliminar-icon.svg"
                         alt="delete-icon"
@@ -239,6 +320,18 @@ const UserProfile = (): React.JSX.Element => {
                     </figure>
                   </td>
                 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <tr>
                   <td className="font-semibold">Nombre de Usuario</td>
@@ -261,7 +354,9 @@ const UserProfile = (): React.JSX.Element => {
                       />
                     </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center">
+                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
+                    onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}
+                    >
                       <img
                         src="/src/images/eliminar-icon.svg"
                         alt="delete-icon"
@@ -275,7 +370,7 @@ const UserProfile = (): React.JSX.Element => {
           </section>
         </section>
       </section>
-      <ModalPasswordMaster modal={modal} changeModal={changeModalVisibility}  />
+      <ModalPasswordMaster modal={modal} changeModal={changeModalVisibility}  postData={postConfirmPassword}/>
 
     </>
   );

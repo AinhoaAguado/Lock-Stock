@@ -1,35 +1,19 @@
 import React, { useState } from "react";
 import Navbar from "../../templates/Navbar";
 import HeaderMenu from "../../templates/HeaderMenu";
+import { useLoaderData } from "react-router-dom";
 
 const ConnectedDevices = (): React.JSX.Element => {
+
+
+
+
+  //obtener datos de dispositivos
+  const { response } = useLoaderData();
+
+  //filtro de dispsitivos
   const [filtro, setFiltro] = useState("");
-
-
-  const dispositivos = [
-    {
-      movil: "MovilM11T",
-      fecha: "23/11/2023 11:07",
-      delete: "/src/images/eliminar-icon.svg",
-    },
-    {
-      movil: "MovilM11T",
-      fecha: "23/11/2023 11:07",
-      delete: "/src/images/eliminar-icon.svg",
-    },
-    {
-      movil: "iphone",
-      fecha: "21/11/20",
-      delete: "/src/images/eliminar-icon.svg",
-    },
-    {
-      movil: "Samsung",
-      fecha: "23/11/2023 11:07",
-      delete: "/src/images/eliminar-icon.svg",
-    }
-  ];
-
-  const dispositivosFiltrados = dispositivos.filter((dispositivo) =>
+  const dispositivosFiltrados = response.filter((dispositivo) =>
     dispositivo.movil.toLowerCase().includes(filtro.toLowerCase()) ||
     dispositivo.fecha.toLowerCase().includes(filtro.toLowerCase())
   );
@@ -50,7 +34,7 @@ const ConnectedDevices = (): React.JSX.Element => {
           <label htmlFor="" className="h-8 flex items-center justify-center">
             <input
               type="text"
-              className="p-3 w-3/4 border h-full border-black rounded-xl"
+              className="p-2 w-3/4 border h-full border-black rounded-xl"
               value={filtro} placeholder="busqueda"
               onChange={(e) => setFiltro(e.target.value)}
             />

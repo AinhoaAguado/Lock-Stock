@@ -22,9 +22,7 @@ const AccountsForm = (): React.JSX.Element => {
 
 
 
-
-
-  //filtro de cuentas
+  //filtro 
   const [filtro, setFiltro] = useState("");
   
 
@@ -33,51 +31,48 @@ const AccountsForm = (): React.JSX.Element => {
     );
 
 
-
-
-
-
     //ver contraseña
     const [ view, setView ] = useState(true)
 
 
-    //enviar datos
-
-
+    //desactivar modal 5 minutos 
     const [ sendEdit, setSendEdit ]= useState(false)
 
     
+    //ir a pagina de editar cuenta
     const navigateToEditPage = (itemId: string) => {
       navigate(`/password-generator/${itemId}`);
     };
 
 
-    
-    
     const postConfirmPassword = async (data: FieldValues) => {
       try {
-        const { passwordMaster } = data;
-        const newData = await hashData(passwordMaster);
-        const response = await servicesApp.postModal({
-          response: newData
-        })
 
+        //enviar contraseña del modal hasheada
+        const { passwordMaster } = data;
+
+        const response = {
+          password: await hashData(passwordMaster)
+        }
+
+        await servicesApp.postModal(response)
 
         console.log(response)
 
         if (response) {
+          //cerrar modal despues de contraseña
           setModal((prevModal) => (prevModal === "hidden" ? "fixed" : "hidden"));
 
           //ver contraseña
           setView(false)
 
         //ir a pagina de editar una cuenta
-
           setSendEdit(true)
 
+          //tiempo que no aparecera el modal
           setTimeout(()=>{
             setSendEdit(false)
-          },1*60*1000)
+          },1*60*5000)
 
         }
    
@@ -91,18 +86,20 @@ const AccountsForm = (): React.JSX.Element => {
 
 
 
-    const postDelete = async (itemId: string) => {
+    //borrar cuenta
+    const deleteAccount = async (itemId: string) => {
       try {
 
         const newData={
-          id: itemId
+          id: await hashData(itemId)
         }
 
+        const response = await servicesApp.deleteAccountUser(newData);
 
-   
-          await servicesApp.postDelete(newData);
-      
+        //datos enviados
+        console.log(newData)
 
+        //respuesta de peticion
         console.log(response)
        
       } catch (error) {
@@ -172,7 +169,7 @@ const AccountsForm = (): React.JSX.Element => {
             >
               <figure className="flex justify-center min-w-16 max-w-16 text-black text-sm font-bold w-16">
                 <img
-                  src={"/src/images/google-icon.svg"}
+                  src={"/src/images/account-logos.svg"}
                   alt={item.Name_Aplication}
                   className="h-8 w-8"
                 />
@@ -192,7 +189,6 @@ const AccountsForm = (): React.JSX.Element => {
               <div className="text-black text-sm font-bold min-w-28 max-w-28">
                 {view? '**********' : item.Password_Aplication}
               </div>
-
 
 
 
@@ -231,7 +227,7 @@ const AccountsForm = (): React.JSX.Element => {
                   alt="trash-icon"
                   className="h-5 cursor-pointer"
                   onClick={() => {
-                    sendEdit? postDelete(item.id): setModal('fixed');
+                    sendEdit? deleteAccount(item.id): setModal('fixed');
                   }}
                 />
 

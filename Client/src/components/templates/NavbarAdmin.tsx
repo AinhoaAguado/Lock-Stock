@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { servicesApp } from "../../services/services";
 
 interface navbarAdmin {
   dashboard?: boolean,
@@ -9,7 +10,18 @@ interface navbarAdmin {
 }
 
 const NavbarAdmin = ({dashboard, activity, incidents, notifications}: navbarAdmin): React.JSX.Element => {
+  const [count, setCount] = useState();
 
+  useEffect(() => {
+    const notificationCount = async () => {
+      const getNotifications = await servicesApp.getNotificationsAdmin(); // <-- Add parentheses to invoke the function
+      const notifications = getNotifications?.response;
+   
+      setCount(notifications.length);
+    };
+  
+    notificationCount();
+  }, []);
 
 
   return (
@@ -28,7 +40,7 @@ de usuarios</Link>
             <Link to={"/dashboard-incidents"} className={`${incidents? 'text-primary': 'text-white'} hover:text-primary`}>Incidencias</Link>
           </li>
           <li>
-            <Link to={"/notification-admin"} className={`${notifications? 'text-primary': 'text-white'} hover:text-primary`}>Buzón de notificiones</Link>
+            <Link to={"/notification-admin"} className={`${notifications? 'text-primary': 'text-white'} hover:text-primary flex gap-1`}>Buzón de notificiones <span className="flex items-center justify-center text-primary">{count}  <img src="/src/images/mailbox-icon.svg" alt="notification" className="h-6" /></span></Link>
           </li>
         </ul>
       </nav>

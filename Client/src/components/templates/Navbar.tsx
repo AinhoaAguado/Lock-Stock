@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { servicesApp } from "../../services/services";
 
 interface NavbarProps {
   cuentas?: boolean,
@@ -13,7 +14,21 @@ interface NavbarProps {
 
 const Navbar = ({ cuentas, generador, buzon, dispositivos, perfil, usar, ayuda,  }: NavbarProps): React.JSX.Element => {
 
+
+  const [ count, setCount ] = useState()
  
+  useEffect(()=>{
+    const countNotification =async ()=>{
+      const notifications = await servicesApp.getNotifications();
+      const response = await notifications?.response
+      const number = response.map((a)=>{return a.message})
+
+
+      setCount(number.length)
+
+    }
+    countNotification()
+  },[])
 
   return (
     <>
@@ -26,8 +41,8 @@ const Navbar = ({ cuentas, generador, buzon, dispositivos, perfil, usar, ayuda, 
           <li>
             <Link to={"/password-generator"} className={`${generador ? 'text-primary' : 'text-white'} hover:text-primary`} >Generar Contraseña</Link>
           </li>
-          <li>
-            <Link to={"/notification-mailbox"} className={`${buzon ? 'text-primary' : 'text-white'} hover:text-primary`}>Buzón de Notificaciones</Link>
+          <li >
+            <Link to={"/notification-mailbox"} className={`${buzon ? 'text-primary' : 'text-white'} hover:text-primary flex items-center gap-1`}>Buzón de Notificaciones <span className="text-primary flex items-center">{count}<img src="/src/images/mailbox-icon.svg" className="h-6 w-auto"/></span></Link>
           </li>
           <li>
             <Link to={"/connected-devices"} className={`${dispositivos ? 'text-primary' : 'text-white'} hover:text-primary`}>Dispositivos Conectados</Link>

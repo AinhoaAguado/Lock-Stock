@@ -1,58 +1,24 @@
 import React, { useState } from "react";
 import HeaderMenu from "../../templates/HeaderMenu";
 import NavbarAdmin from "../../templates/NavbarAdmin";
+import { useLoaderData } from "react-router-dom";
 
 const UserActivity = (): React.JSX.Element => {
-  const userActivityData = [
-    {
-      name: "Leire1932",
-      status: "Activo",
-      ipAddress: "193.00.00.01",
-      os: "IOS",
-      registrationDate: "23/11/2023",
-      lastConnection: "23/11/2023@11:07:03",
-    },
-    {
-      name: "Leire1932",
-      status: "Activo",
-      ipAddress: "193.00.00.01",
-      os: "IOS",
-      registrationDate: "23/11/2023",
-      lastConnection: "23/11/2023@11:07:03",
-    },
-    {
-      name: "Leire1932",
-      status: "Activo",
-      ipAddress: "193.00.00.01",
-      os: "IOS",
-      registrationDate: "23/11/2023",
-      lastConnection: "23/11/2023@11:07:03",
-    },
-    {
-      name: "Leire1932",
-      status: "Activo",
-      ipAddress: "193.00.00.01",
-      os: "IOS",
-      registrationDate: "23/11/2023",
-      lastConnection: "23/11/2023@11:07:03",
-    },
-    {
-      name: "meire1932",
-      status: "Activo",
-      ipAddress: "193.00.00.01",
-      os: "IOS",
-      registrationDate: "23/11/2023",
-      lastConnection: "23/11/2023@11:07:03",
-    },
-  ];
 
+
+  //datos obtenidos
+  const { response } = useLoaderData();
+  
+
+
+  //filtro
   const [find, setFind] = useState("");
-  const [filteredActivity, setFilteredActivity] = useState(userActivityData);
+  const [filteredActivity, setFilteredActivity] = useState( response);
 
   const findUserActivity = () => {
     const filterTerm = find.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     setFilteredActivity(
-      userActivityData.filter(
+       response.filter(
         (user) =>
           Object.values(user).some((value) =>
             value
@@ -65,6 +31,8 @@ const UserActivity = (): React.JSX.Element => {
     );
   };
 
+
+  
   return (
     <>
       <HeaderMenu />
@@ -78,9 +46,10 @@ const UserActivity = (): React.JSX.Element => {
           <label htmlFor="" className="h-8 flex items-center justify-center gap-5">
             <input
               type="text"
-              className="w-3/4 border h-full border-black rounded-xl"
-              placeholder="¿En qué podemos ayudarte?"
+              className="w-3/4 border h-full border-black rounded-xl p-2"
+              placeholder="Busqueda Rapida"
               onChange={(e) => setFind(e.target.value)}
+              
             />
       
           <button className="h-full  bg-[url(/src/images/search.svg)] bg-center" onClick={findUserActivity}></button>

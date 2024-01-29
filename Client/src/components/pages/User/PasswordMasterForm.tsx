@@ -28,7 +28,7 @@ const PasswordMasterForm = (): React.JSX.Element => {
 
     //autenticathion
 
-    
+
 
 
     const newData = {
@@ -78,12 +78,7 @@ const PasswordMasterForm = (): React.JSX.Element => {
               <p className="text-red-500 font-medium">{`${errors.answer.message}`}</p>
             )}
           </label>
-          <label htmlFor="confirmAnswer" className="flex flex-col">Confirmar Pregunta de Seguridad
-            <input id="confirmAnswer" type="text" className="border border-black rounded" {...register('confirmAnswer')} />
-            {errors.confirmAnswer && (
-              <p className="text-red-500 font-medium">{`${errors.confirmAnswer.message}`}</p>
-            )}
-          </label>
+
 
 
 

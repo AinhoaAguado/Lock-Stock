@@ -49,7 +49,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'connected-devices',
-                element: <TokenAccess><ConnectedDevices /></TokenAccess>
+                element: <TokenAccess><ConnectedDevices /></TokenAccess>,
+                loader: servicesApp.getDevices
             },
             {
                 path: 'notification-mailbox',
@@ -59,7 +60,7 @@ export const router = createBrowserRouter([
             {
                 path: 'password-generator/:id?',
                 element: <TokenAccess><PasswordGenerator/></TokenAccess>,
-                loader: servicesApp.getAplications
+                loader: servicesApp.getAccountsUser
             },
             {
                 path: 'recovery-password',
@@ -68,7 +69,7 @@ export const router = createBrowserRouter([
             {
                 path:'accounts-user',
                 element: <AccountsUser />,
-                 loader: servicesApp.getAplications
+                 loader: servicesApp.getAccountsUser
             }
         ],
     },
@@ -82,19 +83,23 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/dashboard-admin',
-                element: <DashboardAdmin />
+                element: <DashboardAdmin />,
+                loader: servicesApp.getDashboardAdmin
             },
             {
                 path: '/user-activity',
-                element: <UserActivity />
+                element: <UserActivity />,
+                loader: servicesApp.getUserActivity
             },
             {
                 path: 'dashboard-incidents',
-                element: <DashboardIncidents />
+                element: <DashboardIncidents />,
+                loader: servicesApp.getDashboardIncidents
             },
             {
                 path: '/notification-admin',
-                element: <NotificationAdmin />
+                element: <NotificationAdmin />,
+                loader: servicesApp.getNotificationsAdmin
             }
         ]
     }

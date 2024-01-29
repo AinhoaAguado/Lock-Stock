@@ -40,7 +40,7 @@
       "Password_User": "miClaveSecreta",
       "Password_Master_User": "claveMaestraSecreta",
       "Email_User": "usuario3@example.com",
-      "Name_User": "usuario7",
+      "Name_User": "usuario777",
       "SurName_User": "Apellido3",
       "Mobile_User": 987654321,
       "Question_Security_User": "¿Cuál es tu película favorita?",
@@ -66,93 +66,303 @@
       "Email_User": "user@hotmail.com",
       "Name_User": "Facebook",
       "Password_Aplication": "1234567"
+    },
+    {
+      "id": "1710"
+    },
+    {
+      "id": "5db0",
+      "Name_Aplication": "$2a$10$E4Pd9sTvCbiATF2PHl80quuxrCxDKCBYn/BhaPGMoJ6zGNjMvBjpy",
+      "Email_Aplication": "$2a$10$.KDHjcHS2sUM6AkZegw9dutKfxba6EVQAKO3HYkZZvBF1dD0hLAc2",
+      "Name_User": "$2a$10$hU/hZqrhkVDmhgkZsg75a.c0m8/Taad9p9EOI0VD3QL.2ToQMR77q",
+      "Password_Aplication": "$2a$10$kzbyXGJsKOY.wndkY4Zt2.Sll9KF5n9kQDZ/cuuKrMNW6QcJKtiLS"
     }
   ],
   "Notifications_User": [
     {
-      "id_Notification": "1",
-      "Notes_Notification": [
-        "mensaje 1",
-        "mensaje 2",
-        "mensaje 3"
-      ],
-      "id_User": "1"
+      "message": "mensaje 1",
+      "boolean": false,
+      "id": "1"
+    },
+    {
+      "message": "mensaje 2",
+      "boolean": false,
+      "id": "2"
+    },
+    {
+      "message": "mensaje 3",
+      "boolean": true,
+      "id": "3"
+    },
+    {
+      "message": "mensaje 4",
+      "boolean": true,
+      "id": "4"
+    },
+    {
+      "message": "mensaje 5",
+      "boolean": true,
+      "id": "5"
+    },
+    {
+      "message": "mensaje 6",
+      "boolean": true,
+      "id": "6"
+    },
+    {
+      "message": "mensaje 7",
+      "boolean": true,
+      "id": "7"
+    },
+    {
+      "message": "mensaje 8",
+      "boolean": true,
+      "id": "8"
+    },
+    {
+      "message": "mensaje 9",
+      "boolean": true,
+      "id": "9"
+    },
+    {
+      "message": "mensaje 10",
+      "boolean": false,
+      "id": "10"
+    },
+    {
+      "message": "mensaje 11",
+      "boolean": true,
+      "id": "11"
+    },
+    {
+      "message": "mensaje 12",
+      "boolean": false,
+      "id": "12"
+    },
+    {
+      "message": "mensaje 13",
+      "boolean": true,
+      "id": "13"
+    },
+    {
+      "message": "mensaje 14",
+      "boolean": true,
+      "id": "14"
+    },
+    {
+      "message": "mensaje 15",
+      "boolean": true,
+      "id": "15"
+    },
+    {
+      "message": "mensaje 16",
+      "boolean": true,
+      "id": "16"
+    },
+    {
+      "message": "mensaje 17",
+      "boolean": true,
+      "id": "17"
     }
   ],
   "Aplications_User": [
     {
-      "id": "1",
-      "Id_Aplications": "1",
-      "Name_Aplication": "Facebook",
-      "Email_Aplication": "user@hotmail.com",
-      "Category_Aplication": "social",
-      "Password_Aplication": "password",
-      "Id_User": "123e4567-e89b-12d3-a456-426614174000",
-      "Email_User": "user@hotmail.com",
-      "Name_User": "Facebook"
-    },
-    {
-      "id": "2",
-      "Id_Aplications": "1",
-      "Name_Aplication": "YouTube",
-      "Email_Aplication": "user2@hotmail.com",
-      "Category_Aplication": "videos",
-      "Password_Aplication": "1234567",
-      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
-    },
-    {
-      "id": "3",
-      "Id_Aplications": "2",
-      "Name_Aplication": "Instagram",
-      "Email_Aplication": "user3@hotmail.com",
-      "Category_Aplication": "social",
-      "Password_Aplication": "password3",
-      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
-    },
-    {
-      "id": "4",
-      "Id_Aplications": "2",
-      "Name_Aplication": "Twitter",
-      "Email_Aplication": "user4@hotmail.com",
-      "Category_Aplication": "social",
-      "Password_Aplication": "password4",
-      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
-    },
-    {
-      "id": "5",
-      "Id_Aplications": "1",
-      "Name_Aplication": "YouTube",
-      "Email_Aplication": "user2@hotmail.com",
-      "Category_Aplication": "videos",
-      "Password_Aplication": "1234567",
-      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
-    },
-    {
-      "id": "6",
+      "id": "9",
       "Id_Aplications": "3",
-      "Name_Aplication": "Snapchat",
-      "Email_Aplication": "user6@hotmail.com",
+      "Name_Aplication": "LinkedIn",
+      "Email_Aplication": "user9@hotmail.com",
+      "Category_Aplication": "professional",
+      "Password_Aplication": "password9",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "10",
+      "Id_Aplications": "5",
+      "Name_Aplication": "Spotify",
+      "Email_Aplication": "user10@hotmail.com",
+      "Category_Aplication": "music",
+      "Password_Aplication": "password10",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "11",
+      "Id_Aplications": "6",
+      "Name_Aplication": "Pinterest",
+      "Email_Aplication": "user11@hotmail.com",
       "Category_Aplication": "social",
-      "Password_Aplication": "password6",
+      "Password_Aplication": "password11",
       "Id_User": "123e4567-e89b-12d3-a456-426614174000"
     },
     {
-      "id": "7",
-      "Id_Aplications": "4",
-      "Name_Aplication": "WhatsApp",
-      "Email_Aplication": "user7@hotmail.com",
-      "Category_Aplication": "messaging",
-      "Password_Aplication": "password7",
+      "id": "12",
+      "Id_Aplications": "7",
+      "Name_Aplication": "TikTok",
+      "Email_Aplication": "user12@hotmail.com",
+      "Category_Aplication": "videos",
+      "Password_Aplication": "password12",
       "Id_User": "123e4567-e89b-12d3-a456-426614174000"
     },
     {
-      "id": "8",
-      "Id_Aplications": "4",
-      "Name_Aplication": "Telegram",
-      "Email_Aplication": "user8@hotmail.com",
+      "id": "13",
+      "Id_Aplications": "8",
+      "Name_Aplication": "Netflix",
+      "Email_Aplication": "user13@hotmail.com",
+      "Category_Aplication": "streaming",
+      "Password_Aplication": "password13",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "14",
+      "Id_Aplications": "9",
+      "Name_Aplication": "Zoom",
+      "Email_Aplication": "user14@hotmail.com",
+      "Category_Aplication": "communication",
+      "Password_Aplication": "password14",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "15",
+      "Id_Aplications": "10",
+      "Name_Aplication": "Google Drive",
+      "Email_Aplication": "user15@hotmail.com",
+      "Category_Aplication": "productivity",
+      "Password_Aplication": "password15",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "16",
+      "Id_Aplications": "11",
+      "Name_Aplication": "Amazon",
+      "Email_Aplication": "user16@hotmail.com",
+      "Category_Aplication": "shopping",
+      "Password_Aplication": "password16",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "17",
+      "Id_Aplications": "12",
+      "Name_Aplication": "Microsoft Teams",
+      "Email_Aplication": "user17@hotmail.com",
+      "Category_Aplication": "communication",
+      "Password_Aplication": "password17",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "18",
+      "Id_Aplications": "13",
+      "Name_Aplication": "Snapseed",
+      "Email_Aplication": "user18@hotmail.com",
+      "Category_Aplication": "photography",
+      "Password_Aplication": "password18",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "19",
+      "Id_Aplications": "14",
+      "Name_Aplication": "WhatsApp Business",
+      "Email_Aplication": "user19@hotmail.com",
       "Category_Aplication": "messaging",
-      "Password_Aplication": "password8",
-      "Id_User": "123e4567-e89b-12d3-a"
+      "Password_Aplication": "password19",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "20",
+      "Id_Aplications": "15",
+      "Name_Aplication": "Adobe Photoshop Express",
+      "Email_Aplication": "user20@hotmail.com",
+      "Category_Aplication": "photography",
+      "Password_Aplication": "password20",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "21",
+      "Id_Aplications": "16",
+      "Name_Aplication": "Uber",
+      "Email_Aplication": "user21@hotmail.com",
+      "Category_Aplication": "transportation",
+      "Password_Aplication": "password21",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "22",
+      "Id_Aplications": "17",
+      "Name_Aplication": "Fitbit",
+      "Email_Aplication": "user22@hotmail.com",
+      "Category_Aplication": "health",
+      "Password_Aplication": "password22",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "23",
+      "Id_Aplications": "18",
+      "Name_Aplication": "Tinder",
+      "Email_Aplication": "user23@hotmail.com",
+      "Category_Aplication": "dating",
+      "Password_Aplication": "password23",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "24",
+      "Id_Aplications": "19",
+      "Name_Aplication": "Google Maps",
+      "Email_Aplication": "user24@hotmail.com",
+      "Category_Aplication": "maps",
+      "Password_Aplication": "password24",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "25",
+      "Id_Aplications": "20",
+      "Name_Aplication": "Fitbod",
+      "Email_Aplication": "user25@hotmail.com",
+      "Category_Aplication": "fitness",
+      "Password_Aplication": "password25",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "26",
+      "Id_Aplications": "21",
+      "Name_Aplication": "Duolingo",
+      "Email_Aplication": "user26@hotmail.com",
+      "Category_Aplication": "education",
+      "Password_Aplication": "password26",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "27",
+      "Id_Aplications": "22",
+      "Name_Aplication": "Pocket",
+      "Email_Aplication": "user27@hotmail.com",
+      "Category_Aplication": "reading",
+      "Password_Aplication": "password27",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "28",
+      "Id_Aplications": "23",
+      "Name_Aplication": "MyFitnessPal",
+      "Email_Aplication": "user28@hotmail.com",
+      "Category_Aplication": "health",
+      "Password_Aplication": "password28",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "29",
+      "Id_Aplications": "24",
+      "Name_Aplication": "Google Photos",
+      "Email_Aplication": "user29@hotmail.com",
+      "Category_Aplication": "photography",
+      "Password_Aplication": "password29",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "id": "30",
+      "Id_Aplications": "25",
+      "Name_Aplication": "Weather Channel",
+      "Email_Aplication": "user30@hotmail.com",
+      "Category_Aplication": "weather",
+      "Password_Aplication": "password30",
+      "Id_User": "123e4567-e89b-12d3-a456-426614174000"
     }
   ],
   "modal": [
@@ -260,180 +470,800 @@
       "response": "$2a$10$yBjY894KK/gKs1So0JxOn.bYrNQgqQLmnBWTEkopw2fdb9fO1EuGC"
     },
     {
-      "id": "5e3b",
-      "response": "$2a$10$MwBIivLy2TsZY6DOay074uydMvXLaNzE5yWIMo01H33ofG.J92Erm"
+      "id": "45e1",
+      "response": "$2a$10$8U3zZ8K6F0xEcrRFAZ9dpeDlWByOH.76YM4zPVHg2iRA6JzME7QSC"
     },
     {
-      "id": "6db6",
-      "response": "$2a$10$uorH9S5GA/UlEpD4rUffFuIVS8Wy4h4bbeqN41h0/nsKe69h1sPIS"
+      "id": "d9f6",
+      "response": "$2a$10$ujeuhnkgdRFJcApeZgqDJeQkyca75GKJbd3KC8RKEtjHkiPcIHuke"
     },
     {
-      "id": "960a",
-      "response": "$2a$10$fuF9DWleCwgXHe3J0g6KNehkI3rSW8gnuc8/N6AyyuBb8h7qiLtyK"
+      "id": "3478",
+      "response": "$2a$10$e/LlflBeZwwZsdJ35O8jpe.PRI5m4D0vIguiwLSUAqMosBfJiQ386"
     },
     {
-      "id": "3c6f",
-      "response": "$2a$10$P0/io2HepycKtJ5rT3BO..1vZ8YQ1.j4FoldUcijTowuLd6DYw4qa"
+      "id": "14e6",
+      "answerSegurity": "hola",
+      "response": "lunes"
     },
     {
-      "id": "a831",
-      "response": "$2a$10$bHK7mqs3hK9QtCWx4J8KM.vn5KYnZNnFyHqbOuy9RfCqCLCUl9Cx2"
+      "id": "78d0",
+      "answerSegurity": "hola",
+      "response": "lunes"
     },
     {
-      "id": "6012",
-      "response": "$2a$10$0/REvTIeD03.i.FrdnnzlelS4ktyAhR2ycLsyUJlr69TTiuvTESfK"
+      "id": "531f"
     },
     {
-      "id": "977d",
-      "response": "$2a$10$b94N5cGgrU.R1GBisCGJVOV3SFMhLXRtEB1UfnTb0JNIltT61DfI."
+      "id": "5f6b"
     },
     {
-      "id": "caa1",
-      "response": "$2a$10$2H1tghIifuSJwVkCO5.P2uQ17/cpXxgzFJ/TxnnzMtcI7N3j6FkBC"
+      "id": "c85d"
     },
     {
-      "id": "28ce",
-      "response": "$2a$10$PKS.8AEVWYMZW8gIZ1KGzOON4M7hSFE.RX/zBy93GIk/l0asCIP8O"
+      "id": "b587"
     },
     {
-      "id": "6d49",
-      "response": "$2a$10$lC7dx0UJ5.uf5e7kx/3dseF6JJSKJOlEb92NnJIRigQ7UGQye01C6"
+      "id": "b768"
     },
     {
-      "id": "6201",
-      "response": "$2a$10$uwrgWWcu5SP5rJ1oCuinxORmwXUjsIyjKpE9tDRDv67/8AvHlRXOi"
+      "id": {
+        "Usuario": "MovilM11T",
+        "FechaRegistro": "23/11/2023 11:07",
+        "UltimaConexion": "23/11/2023 11:07",
+        "DireccionIP": "192.168.1.1",
+        "Bloquear": true,
+        "Eliminar": true
+      }
     },
     {
-      "id": "e54e",
-      "response": "$2a$10$NvmhJLPwd8DYKX291t4Q0O9vIBRuw03P5GmZw80Pvkhv2J7RwIvES"
+      "id": {
+        "Usuario": "OtroUsuario",
+        "FechaRegistro": "24/11/2023 12:30",
+        "UltimaConexion": "24/11/2023 12:30",
+        "DireccionIP": "192.168.1.2",
+        "Bloquear": false,
+        "Eliminar": false
+      }
     },
     {
-      "id": "0f51",
-      "response": "$2a$10$bBxEibuTro6WD9jNt6Cne.n4yy/9hAZzm08rMwSop5ASkDUVpCDwC"
+      "id": {
+        "Usuario": "Usuario3",
+        "FechaRegistro": "25/11/2023 14:45",
+        "UltimaConexion": "25/11/2023 14:45",
+        "DireccionIP": "192.168.1.3",
+        "Bloquear": true,
+        "Eliminar": false
+      }
     },
     {
-      "id": "c7e4",
-      "response": "$2a$10$HoIw3oEaidq/1wR7i5qS0eHwRO3q5FCACiu5YcIpPkySEFZtbA7TS"
+      "id": {
+        "Usuario": "Usuario4",
+        "FechaRegistro": "26/11/2023 16:20",
+        "UltimaConexion": "26/11/2023 16:20",
+        "DireccionIP": "192.168.1.4",
+        "Bloquear": false,
+        "Eliminar": true
+      }
     },
     {
-      "id": "cd21",
-      "response": "$2a$10$0mYYlAh5dqyo.6MS38MIiefJ36wQKBFL0UyT/pkYWC3JDDzhP16dW"
+      "id": {
+        "Usuario": "Usuario5",
+        "FechaRegistro": "27/11/2023 18:10",
+        "UltimaConexion": "27/11/2023 18:10",
+        "DireccionIP": "192.168.1.5",
+        "Bloquear": true,
+        "Eliminar": true
+      }
     },
     {
-      "id": "1f44",
-      "response": "$2a$10$N5OrG4vVo.HQIJqpJXcZpeGt13h5S/Jl5fgyzhwAdO4A6NqDHFosa"
+      "id": "$2a$10$JPsgyo5GSi5ilDizF8hIEex5HwzBxqCicNMKKzAujHQVAfYVpx3Pm"
     },
     {
-      "id": "06c9",
-      "response": "$2a$10$SYuj2L.XR8iG/ADAPXZXnO6qJWScwpP9HJ3HxU8Bx0EFQsV/dGfmC"
+      "id": "$2a$10$.7A2EpVeStBVCmzjtb1KIOMAnV2T/kSlF.7Dgu9sI/s6BefbkbX4a"
     },
     {
-      "id": "7d53",
-      "response": "$2a$10$MFAJiAXbb0wK1jP2oGLS5.D/WJg/Y1m7v/OPTsM5bBbAofDVNTLl."
+      "id": "$2a$10$sJpwrpydQLVPNPn6sAp1zu2d/47/GIV59FzyvHvYs1gEA62UnCcge"
     },
     {
-      "id": "0d57",
-      "response": "$2a$10$3vrTQ3cXNtD/cORJwrEgp.1AUpecB8IQwYYyDNcUzIjxMDLw5xf0K"
+      "id": {}
     },
     {
-      "id": "9677",
-      "response": "$2a$10$TWCoBA0uFoMrStVpzycLw.IhcOhUOPV7oV8EJhcetCNCC3N6201HC"
+      "id": {}
     },
     {
-      "id": "22a2",
-      "response": "$2a$10$81b/SQGyYxUVv0DizmzRbebJdJ6Oj0X0ViAdIhdO8EvFAUq3UxOIi"
+      "id": {}
     },
     {
-      "id": "ee05",
-      "response": "$2a$10$20s8jE73L66i.iSQj5MqeOaj0KxoPFdumj9hRagX1j5cKBTz9nuVm"
+      "id": "$2a$10$qMepcVB3AODgN85HJgIV7u8XTNs5X2yw/aJkrMslhvX/qWUt/ddfK"
     },
     {
-      "id": "01bb",
-      "response": "$2a$10$dsTeIxKVzdYedTHGiRaenO9HvW5JbJ4Y5pM2hCuOJL7lfd/LWMBJi"
+      "id": "$2a$10$xrqOuYw0KXwnW.PQI45Qme0Mek2GW3U7t9yCvB05xRDhfQBMpMNw2"
     },
     {
-      "id": "496f",
-      "response": "$2a$10$WKqgSxsAf94Lir.lciI6teYz5prPN7UVLzY6eVKW8yd79dT9oLCnu"
+      "id": "$2a$10$q73lO/CRR.a7DEFj/0BeweV3Z9sexOxCnlXwEKUZ3RdyvD8Ik9th2"
     },
     {
-      "id": "9d31",
-      "response": "$2a$10$epopAS84ReN7obL02gPtlOQmZc38ngFj1UIVkAkGXBu5kHSr/Bn22"
+      "id": "f0d3",
+      "response": "$2a$10$pyWOIDth5Tyg9PBJIKNoo.Rl7HGn43fXCYwvMmHxhwOy497spEF4."
     },
     {
-      "id": "a932",
-      "response": "$2a$10$C8xuLjTmECwllUCVsnW5r.0zh0Vk9lrgsrcPZQXi.YnfAmTIgAybq"
+      "id": "ee44",
+      "response": "$2a$10$Ob/I2yzFlDFmOA02aiQ/ZOX2MYr5FQiVknrfm02Z/qehbuW3KI2j2"
     },
     {
+      "id": "9"
+    },
+    {
+      "id": "83ed",
+      "response": "$2a$10$xH89gfghZQkXXd.t/XhO1umWqnp9Y4rdkn.0ik3rVnq8s73EnMMPO"
+    },
+    {
+      "id": {}
+    },
+    {
+      "id": "9160",
+      "response": "$2a$10$xZ0n5Xti.TSxwXKQWXbmpOGdcjFm3Ni3DgqtVPBB/KJcitZxcuSFG"
+    },
+    {
+      "id": "$2a$10$vf7EwuJZmP3ZEbnf5KcwHuyRr7BrXYT9XAl2yYuK2hfxtjnUlWxqK"
+    },
+    {
+      "id": "e208",
+      "response": "$2a$10$eg6/9fMqXuZGdllL66mH..xIra00kZlH3a93f0.vOGYurg99lviyy"
+    },
+    {
+      "id": "3326",
+      "response": "$2a$10$xQAM5bEnbjNLFPohL3S7SOPU9QzUtbIWSRYGIxN2/syCSpwbpLxvu"
+    },
+    {
+      "id": "7edd",
+      "response": "$2a$10$F58E44dgALg7sRHaX6M8ae7mxOlRsDkcWyR9kJE0S6JFo6.qmarIu"
+    },
+    {
+      "id": "d9fb",
+      "response": "$2a$10$Fiz5vMipudrjIDnR2z1ZBOQnWbQ7xVSOx/GGzPkkL2UopcUJsfcgu"
+    },
+    {
+      "id": "7db3",
+      "response": "$2a$10$KiigQ7EXXxCdKF0RRc5yvuoPlFALxtTNN5d49cg741JOmMpZrdpE."
+    },
+    {
+      "id": "cbee",
+      "passwordMaster": "$2a$10$g8hj2Ex/3sHaIWyTEhAyBO/6bIuNP8hZwrNaO/UF1NmhyDPqUmE26"
+    },
+    {
+      "id": "8a0d",
+      "password": "$2a$10$nUqmRqlm0GIz7PFDZWPV.OEfrzeedUSNNX.Np/QeDFRxkYgyqA4gm"
+    },
+    {
+      "id": "3324",
+      "password": "$2a$10$jGmKdFEVByVOfRNKe4R5u.I4.FWPZA5Te/JdRnfMGTL..VH6imR.G"
+    },
+    {
+      "id": "6848",
+      "password": "$2a$10$zRr9FlQkrCcxY4EGtYSnNeaY951qrUB8KaMp71uWTx.XiQf0Pnb5K"
+    },
+    {
+      "id": "700a",
+      "password": "$2a$10$BuN/oFaYicMkMGe7szmKFuTkSPerLL8ql8cFKS/udhasBV3RXyONm"
+    },
+    {
+      "id": "0667",
+      "answerSegurity": "hola",
+      "response": "lunes"
+    }
+  ],
+  "dashboardAdmin": [
+    {
+      "Usuario": "MovilM11T",
+      "FechaRegistro": "23/11/2023 11:07",
+      "UltimaConexion": "23/11/2023 11:07",
+      "DireccionIP": "192.168.1.1",
+      "Bloquear": true,
+      "Eliminar": true,
       "id": "1"
     },
     {
-      "id": "1"
+      "Usuario": "OtroUsuario",
+      "FechaRegistro": "24/11/2023 12:30",
+      "UltimaConexion": "24/11/2023 12:30",
+      "DireccionIP": "192.168.1.2",
+      "Bloquear": false,
+      "Eliminar": false,
+      "id": "2"
     },
     {
-      "id": "1"
-    },
-    {
+      "Usuario": "Usuario3",
+      "FechaRegistro": "25/11/2023 14:45",
+      "UltimaConexion": "25/11/2023 14:45",
+      "DireccionIP": "192.168.1.3",
+      "Bloquear": true,
+      "Eliminar": false,
       "id": "3"
     },
     {
-      "id": "2"
-    },
-    {
-      "id": "2"
-    },
-    {
-      "id": "2"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "3"
-    },
-    {
-      "id": "09dd",
-      "response": "$2a$10$/eFkSwb22Y/NxaTatCbFneK8cfrOYVxzrOKuQo6ZDR0D2sylXVBVa"
-    },
-    {
-      "id": "e20d",
-      "response": "$2a$10$zQg6fuNE13V0cjnhOwCrReor9ZUk86mjLFqPX8vL6jtdI.wyie5V2"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "3"
-    },
-    {
-      "id": "a281",
-      "response": "$2a$10$mfr2RAG45TF330D1WmmCCOVZAS7Xk7wVRMMS9rb8QXPEE9VvJS2ce"
-    },
-    {
-      "id": "0be2",
-      "response": "$2a$10$70pKwgDd5V31Ei6gLBtfC.ja.rGk8MytUZQjAxzkrckL4/hE2UNpG"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "3bff",
-      "response": "$2a$10$zJnd3d5Xf4Jls7Co/1RVKOidGK5iYYQu/6TehwonIkKwg0BXVUEjC"
-    },
-    {
-      "id": "2"
-    },
-    {
+      "Usuario": "Usuario4",
+      "FechaRegistro": "26/11/2023 16:20",
+      "UltimaConexion": "26/11/2023 16:20",
+      "DireccionIP": "192.168.1.4",
+      "Bloquear": false,
+      "Eliminar": true,
       "id": "4"
     },
     {
-      "id": "647f",
-      "response": "$2a$10$LROrjlTqVnYdEZoZlsBDLeg7sqAq61SOYQ8.f8Pl3emXz7sMtEpNG"
+      "Usuario": "Usuario5",
+      "FechaRegistro": "27/11/2023 18:10",
+      "UltimaConexion": "27/11/2023 18:10",
+      "DireccionIP": "192.168.1.5",
+      "Bloquear": true,
+      "Eliminar": true,
+      "id": "5"
     },
     {
-      "id": "1"
+      "Usuario": "Usuario6",
+      "FechaRegistro": "28/11/2023 09:45",
+      "UltimaConexion": "28/11/2023 09:45",
+      "DireccionIP": "192.168.1.6",
+      "Bloquear": false,
+      "Eliminar": false,
+      "id": "6"
+    },
+    {
+      "Usuario": "Usuario7",
+      "FechaRegistro": "29/11/2023 11:30",
+      "UltimaConexion": "29/11/2023 11:30",
+      "DireccionIP": "192.168.1.7",
+      "Bloquear": true,
+      "Eliminar": true,
+      "id": "7"
+    },
+    {
+      "Usuario": "Usuario8",
+      "FechaRegistro": "30/11/2023 14:15",
+      "UltimaConexion": "30/11/2023 14:15",
+      "DireccionIP": "192.168.1.8",
+      "Bloquear": false,
+      "Eliminar": false,
+      "id": "8"
+    },
+    {
+      "Usuario": "Usuario9",
+      "FechaRegistro": "01/12/2023 16:50",
+      "UltimaConexion": "01/12/2023 16:50",
+      "DireccionIP": "192.168.1.9",
+      "Bloquear": true,
+      "Eliminar": true,
+      "id": "9"
+    },
+    {
+      "Usuario": "Usuario10",
+      "FechaRegistro": "02/12/2023 18:40",
+      "UltimaConexion": "02/12/2023 18:40",
+      "DireccionIP": "192.168.1.10",
+      "Bloquear": false,
+      "Eliminar": false,
+      "id": "10"
+    },
+    {
+      "Usuario": "Usuario11",
+      "FechaRegistro": "03/12/2023 09:30",
+      "UltimaConexion": "03/12/2023 09:30",
+      "DireccionIP": "192.168.1.11",
+      "Bloquear": true,
+      "Eliminar": true,
+      "id": "11"
+    },
+    {
+      "Usuario": "Usuario12",
+      "FechaRegistro": "04/12/2023 11:20",
+      "UltimaConexion": "04/12/2023 11:20",
+      "DireccionIP": "192.168.1.12",
+      "Bloquear": false,
+      "Eliminar": false,
+      "id": "12"
+    },
+    {
+      "Usuario": "Usuario13",
+      "FechaRegistro": "05/12/2023 14:10",
+      "UltimaConexion": "05/12/2023 14:10",
+      "DireccionIP": "192.168.1.13",
+      "Bloquear": true,
+      "Eliminar": true,
+      "id": "13"
+    },
+    {
+      "Usuario": "Usuario14",
+      "FechaRegistro": "06/12/2023 16:00",
+      "UltimaConexion": "06/12/2023 16:00",
+      "DireccionIP": "192.168.1.14",
+      "Bloquear": false,
+      "Eliminar": false,
+      "id": "14"
+    },
+    {
+      "Usuario": "Usuario15",
+      "FechaRegistro": "07/12/2023 17:50",
+      "UltimaConexion": "07/12/2023 17:50",
+      "DireccionIP": "192.168.1.15",
+      "Bloquear": true,
+      "Eliminar": true,
+      "id": "15"
+    }
+  ],
+  "userActivity": [
+    {
+      "name": "Leire1932",
+      "status": "Activo",
+      "ipAddress": "193.00.00.01",
+      "os": "IOS",
+      "registrationDate": "23/11/2023",
+      "lastConnection": "23/11/2023@11:07:03"
+    },
+    {
+      "name": "JohnDoe",
+      "status": "Inactivo",
+      "ipAddress": "192.168.0.15",
+      "os": "Android",
+      "registrationDate": "24/11/2023",
+      "lastConnection": "24/11/2023@12:30:45"
+    },
+    {
+      "name": "AliceSmith",
+      "status": "Activo",
+      "ipAddress": "10.0.0.5",
+      "os": "Windows",
+      "registrationDate": "25/11/2023",
+      "lastConnection": "25/11/2023@14:45:20"
+    },
+    {
+      "name": "BobJohnson",
+      "status": "Activo",
+      "ipAddress": "172.16.0.1",
+      "os": "Linux",
+      "registrationDate": "26/11/2023",
+      "lastConnection": "26/11/2023@16:20:10"
+    },
+    {
+      "name": "SophieBrown",
+      "status": "Inactivo",
+      "ipAddress": "192.168.1.10",
+      "os": "MacOS",
+      "registrationDate": "27/11/2023",
+      "lastConnection": "27/11/2023@18:10:30"
+    },
+    {
+      "name": "MikeJohnson",
+      "status": "Activo",
+      "ipAddress": "10.0.0.15",
+      "os": "Windows",
+      "registrationDate": "28/11/2023",
+      "lastConnection": "28/11/2023@09:45:55"
+    },
+    {
+      "name": "EvaWilliams",
+      "status": "Activo",
+      "ipAddress": "172.16.1.5",
+      "os": "Linux",
+      "registrationDate": "29/11/2023",
+      "lastConnection": "29/11/2023@11:30:22"
+    },
+    {
+      "name": "DanielMiller",
+      "status": "Inactivo",
+      "ipAddress": "192.168.2.20",
+      "os": "MacOS",
+      "registrationDate": "30/11/2023",
+      "lastConnection": "30/11/2023@14:15:17"
+    },
+    {
+      "name": "EmmaDavis",
+      "status": "Activo",
+      "ipAddress": "10.0.1.25",
+      "os": "Android",
+      "registrationDate": "01/12/2023",
+      "lastConnection": "01/12/2023@16:50:40"
+    },
+    {
+      "name": "DavidMoore",
+      "status": "Activo",
+      "ipAddress": "172.16.2.10",
+      "os": "IOS",
+      "registrationDate": "02/12/2023",
+      "lastConnection": "02/12/2023@18:40:19"
+    },
+    {
+      "name": "SophiaMartin",
+      "status": "Inactivo",
+      "ipAddress": "192.168.3.30",
+      "os": "Windows",
+      "registrationDate": "03/12/2023",
+      "lastConnection": "03/12/2023@09:30:12"
+    },
+    {
+      "name": "MatthewThompson",
+      "status": "Activo",
+      "ipAddress": "10.0.2.18",
+      "os": "Linux",
+      "registrationDate": "04/12/2023",
+      "lastConnection": "04/12/2023@11:20:48"
+    },
+    {
+      "name": "OliviaClark",
+      "status": "Activo",
+      "ipAddress": "172.16.3.5",
+      "os": "MacOS",
+      "registrationDate": "05/12/2023",
+      "lastConnection": "05/12/2023@14:10:37"
+    },
+    {
+      "name": "JamesWard",
+      "status": "Inactivo",
+      "ipAddress": "192.168.4.25",
+      "os": "IOS",
+      "registrationDate": "06/12/2023",
+      "lastConnection": "06/12/2023@16:00:59"
+    },
+    {
+      "name": "LilyPerez",
+      "status": "Activo",
+      "ipAddress": "10.0.3.12",
+      "os": "Android",
+      "registrationDate": "07/12/2023",
+      "lastConnection": "07/12/2023@17:50:24"
+    },
+    {
+      "name": "BenjaminBaker",
+      "status": "Inactivo",
+      "ipAddress": "172.16.4.30",
+      "os": "Windows",
+      "registrationDate": "08/12/2023",
+      "lastConnection": "08/12/2023@09:30:15"
+    },
+    {
+      "name": "ChloeStewart",
+      "status": "Activo",
+      "ipAddress": "192.168.5.15",
+      "os": "Linux",
+      "registrationDate": "09/12/2023",
+      "lastConnection": "09/12/2023@11:20:55"
+    },
+    {
+      "name": "LoganFisher",
+      "status": "Activo",
+      "ipAddress": "10.0.4.22",
+      "os": "MacOS",
+      "registrationDate": "10/12/2023",
+      "lastConnection": "10/12/2023@14:10:44"
+    },
+    {
+      "name": "MiaBarnes",
+      "status": "Inactivo",
+      "ipAddress": "172.16.5.8",
+      "os": "IOS",
+      "registrationDate": "11/12/2023",
+      "lastConnection": "11/12/2023@16:00:37"
+    }
+  ],
+  "dashboardIncidents": [
+    {
+      "name": "Usuario1",
+      "status": "Activo",
+      "ipAddress": "192.168.1.100",
+      "os": "Windows",
+      "registrationDate": "24/01/2024",
+      "lastConnection": "24/01/2024@14:30:45",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario2",
+      "status": "Inactivo",
+      "ipAddress": "10.0.0.5",
+      "os": "Linux",
+      "registrationDate": "23/01/2024",
+      "lastConnection": "23/01/2024@20:15:22",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario3",
+      "status": "Activo",
+      "ipAddress": "172.16.0.2",
+      "os": "Mac",
+      "registrationDate": "22/01/2024",
+      "lastConnection": "22/01/2024@10:45:12",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario4",
+      "status": "Activo",
+      "ipAddress": "192.168.0.10",
+      "os": "Windows",
+      "registrationDate": "21/01/2024",
+      "lastConnection": "21/01/2024@16:22:30",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario5",
+      "status": "Inactivo",
+      "ipAddress": "10.0.0.15",
+      "os": "Linux",
+      "registrationDate": "20/01/2024",
+      "lastConnection": "20/01/2024@12:10:55",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario6",
+      "status": "Activo",
+      "ipAddress": "172.16.0.8",
+      "os": "Mac",
+      "registrationDate": "19/01/2024",
+      "lastConnection": "19/01/2024@08:05:40",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario7",
+      "status": "Inactivo",
+      "ipAddress": "192.168.2.15",
+      "os": "Windows",
+      "registrationDate": "18/01/2024",
+      "lastConnection": "18/01/2024@14:50:20",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario8",
+      "status": "Activo",
+      "ipAddress": "10.0.1.20",
+      "os": "Linux",
+      "registrationDate": "17/01/2024",
+      "lastConnection": "17/01/2024@20:35:45",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario9",
+      "status": "Inactivo",
+      "ipAddress": "172.16.2.5",
+      "os": "Mac",
+      "registrationDate": "16/01/2024",
+      "lastConnection": "16/01/2024@10:20:30",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario10",
+      "status": "Activo",
+      "ipAddress": "192.168.3.12",
+      "os": "Windows",
+      "registrationDate": "15/01/2024",
+      "lastConnection": "15/01/2024@16:15:55",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario11",
+      "status": "Activo",
+      "ipAddress": "10.0.2.25",
+      "os": "Linux",
+      "registrationDate": "14/01/2024",
+      "lastConnection": "14/01/2024@12:05:20",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario12",
+      "status": "Inactivo",
+      "ipAddress": "172.16.3.10",
+      "os": "Mac",
+      "registrationDate": "13/01/2024",
+      "lastConnection": "13/01/2024@08:00:45",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario13",
+      "status": "Activo",
+      "ipAddress": "192.168.4.18",
+      "os": "Windows",
+      "registrationDate": "12/01/2024",
+      "lastConnection": "12/01/2024@14:50:10",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario14",
+      "status": "Inactivo",
+      "ipAddress": "10.0.3.30",
+      "os": "Linux",
+      "registrationDate": "11/01/2024",
+      "lastConnection": "11/01/2024@20:35:35",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario15",
+      "status": "Activo",
+      "ipAddress": "172.16.4.15",
+      "os": "Mac",
+      "registrationDate": "10/01/2024",
+      "lastConnection": "10/01/2024@10:20:20",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario16",
+      "status": "Inactivo",
+      "ipAddress": "192.168.5.5",
+      "os": "Windows",
+      "registrationDate": "09/01/2024",
+      "lastConnection": "09/01/2024@16:15:45",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario17",
+      "status": "Activo",
+      "ipAddress": "10.0.4.22",
+      "os": "Linux",
+      "registrationDate": "08/01/2024",
+      "lastConnection": "08/01/2024@12:05:10",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario18",
+      "status": "Activo",
+      "ipAddress": "172.16.5.8",
+      "os": "Mac",
+      "registrationDate": "07/01/2024",
+      "lastConnection": "07/01/2024@08:00:35",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario19",
+      "status": "Inactivo",
+      "ipAddress": "192.168.6.20",
+      "os": "Windows",
+      "registrationDate": "06/01/2024",
+      "lastConnection": "06/01/2024@14:50:20",
+      "alertIcon": "/src/images/alert-icon.svg"
+    },
+    {
+      "name": "Usuario20",
+      "status": "Activo",
+      "ipAddress": "10.0.5.15",
+      "os": "Linux",
+      "registrationDate": "05/01/2024",
+      "lastConnection": "05/01/2024@20:35:45",
+      "alertIcon": "/src/images/alert-icon.svg"
+    }
+  ],
+  "notifications": [
+    {
+      "message": "Nueva Contraseña",
+      "icon": true,
+      "color": "white"
+    },
+    {
+      "message": "Nueva Contraseña",
+      "icon": true,
+      "color": "yellow"
+    },
+    {
+      "message": "Nueva Contraseña",
+      "icon": false,
+      "color": "white"
+    },
+    {
+      "message": "Nueva Contraseña",
+      "icon": true,
+      "color": "yellow"
+    },
+    {
+      "message": "Nueva Contraseña",
+      "icon": false,
+      "color": "white"
+    },
+    {
+      "message": "Nueva Contraseña",
+      "icon": false,
+      "color": "yellow"
+    },
+    {
+      "message": "Nueva Contraseña",
+      "icon": false,
+      "color": "yellow"
+    }
+  ],
+  "devices": [
+    {
+      "movil": "Samsung Galaxy S21",
+      "fecha": "05/12/2023 12:30",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Google Pixel 6",
+      "fecha": "06/12/2023 08:45",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "OnePlus 9 Pro",
+      "fecha": "07/12/2023 17:20",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "iPhone 13 Pro",
+      "fecha": "08/12/2023 14:05",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Huawei P40",
+      "fecha": "09/12/2023 11:55",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Motorola Edge",
+      "fecha": "10/12/2023 09:40",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Xiaomi Mi 11",
+      "fecha": "11/12/2023 18:15",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Sony Xperia 1 III",
+      "fecha": "12/12/2023 13:00",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "LG Velvet",
+      "fecha": "13/12/2023 10:50",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Nokia 9 PureView",
+      "fecha": "14/12/2023 08:35",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Samsung Galaxy Note 20",
+      "fecha": "15/12/2023 17:10",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Google Pixel 5",
+      "fecha": "16/12/2023 13:55",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "OnePlus 8T",
+      "fecha": "17/12/2023 11:45",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "iPhone 12",
+      "fecha": "18/12/2023 10:30",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Huawei Mate 40 Pro",
+      "fecha": "19/12/2023 08:20",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Motorola Moto G Power",
+      "fecha": "20/12/2023 17:00",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Xiaomi Redmi Note 9",
+      "fecha": "21/12/2023 12:45",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Sony Xperia 10 III",
+      "fecha": "22/12/2023 10:35",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "LG G8 ThinQ",
+      "fecha": "23/12/2023 09:20",
+      "delete": "/src/images/eliminar-icon.svg"
+    },
+    {
+      "movil": "Nokia 7.2",
+      "fecha": "24/12/2023 18:00",
+      "delete": "/src/images/eliminar-icon.svg"
     }
   ]
 }

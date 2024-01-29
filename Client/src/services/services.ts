@@ -70,7 +70,7 @@ class Services {
 
 
 
-      //Aplications_User
+      //Accounts-user
 
       async deleteAplications (id: number){
         try {
@@ -92,12 +92,21 @@ class Services {
         }
       }
 
-      async getAplications (){
+
+
+
+
+
+
+
+
+      //Accounts-user
+      async getAccountsUser (){
         try {
             const methodCrud = await fetch(`http://localhost:3000/Aplications_User`)
 
               if (!methodCrud.ok) {
-                throw new Error('Error en la peticion');
+                throw new Error('error para obtener los datosde las cuentas');
               }
 
               const response = await methodCrud.json();
@@ -110,7 +119,37 @@ class Services {
       }
 
 
-      async postAplications (data: FieldValues){
+      async deleteAccountUser(data: object){
+        try {
+          const methodCrud = await fetch(`http://localhost:3000/modal`, {
+              method: 'POST',
+              headers: { 'content-type': 'application/json' },
+              body: JSON.stringify(data),
+            });
+
+            if (!methodCrud.ok) {
+              throw new Error('error en eliminacion de cuenta');
+            }
+
+            const response = await methodCrud.json();
+  
+            return response
+      } catch (error) {
+          if (error instanceof Error) {
+              throw new Error(error.message);
+            }
+      }
+      }
+
+
+
+
+
+
+
+      //password generator
+
+      async putAccountUser (data: FieldValues){
         try {
             const methodCrud = await fetch(`http://localhost:3000/Devices_User`, {
                 method: 'POST',
@@ -132,31 +171,23 @@ class Services {
       }
 
 
-      async patchAplications(data: FieldValues, id: string){
+      //notificationMailBox
+      async postNotificationUser(data: boolean){
         try {
+          const method = await fetch('',{
+            method: 'POST',
+            headers: {'content-type':'application/json'},
+            body: JSON.stringify(data)  
+          })
+          const response = await method.json();
+          return response;
 
-            const methodCrud= await fetch(`http://localhost:3000/Aplications_User/${id}`, {
-              method: 'PATCH',
-              headers: { 'content-type': 'application/json' },
-              body: JSON.stringify(data),
-            });
-    
-            if (!methodCrud.ok) {
-              throw new Error('Error en la peticion');
-            }
-        
-            const response = await methodCrud.json();
-
-            return { response };
-
-          } catch (error) {
-              if (error instanceof Error) {
-                  throw new Error(error.message);
-                }
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new Error(error.message);
           }
-  
+        }
       }
-
 
 
 
@@ -197,8 +228,6 @@ class Services {
 
 
       //notifications user
-
-
       async getNotifications (){
         try {
             const methodCrud = await fetch(`http://localhost:3000/Notifications_User`)
@@ -242,14 +271,145 @@ class Services {
 
 
 
+      //recovery password master
+      async recoveryPasswordMaster(data: FieldValues){
+        try {
+          const methodCrud = await fetch(`http://localhost:3000/modal`, {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+
+          const response = await methodCrud.json();
+
+          return response
+
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new Error(error.message)
+          }
+        }
+      }
 
 
+
+
+      //dashboardAdmin
+      async getDashboardAdmin(){
+        try {
+          const methodCrud = await fetch('http://localhost:3000/dashboardAdmin');
+
+          const response = await methodCrud.json();
+          return { response }
+          
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new Error(error.message)
+          }
+        }
+      }
+
+
+      //userActivity
+      async getUserActivity (){
+        try {
+          const methodCrud = await fetch('http://localhost:3000/userActivity');
+          const response = await methodCrud.json();
+          return {response};
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new Error(error.message)
+          }
+        }
+      }
+
+
+      //dashboardIncidents
+      async getDashboardIncidents (){
+        try {
+          const methodCrud = await fetch('http://localhost:3000/dashboardIncidents');
+          const response = await methodCrud.json();
+          return { response };
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new Error(error.message)
+          }
+        }
+      }
+
+
+      //notificationsAdmin
+      async getNotificationsAdmin (){
+        try {
+          const methodCrud = await fetch('http://localhost:3000/notifications');
+          const response = await methodCrud.json();
+          return {response}
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new Error(error.message)
+          }
+        }
+      }
+
+
+      //devices
+      async getDevices(){
+        try {
+          const methodCrud = await fetch('http://localhost:3000/devices');
+          const response = await methodCrud.json();
+          return { response }
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new Error(error.message)
+          }
+        }
+      }
+
+
+
+      //DashboardAdmin
+      async deleteDashboardAdmin(id){
+        try {
+          const methodCrud = await fetch(`http://localhost:3000/modal`,{
+            method:'POST',
+            headers: {'content-type':'application/json'},
+            body: JSON.stringify(id)
+          })
+          const response= await methodCrud.json();
+          return response
+          
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new Error(error.message)
+          }
+        }
+      }
+
+      async blockDashboardAdmin (id){
+        try {
+          const methodCrud = await fetch(`http://localhost:3000/modal`,{
+            method:'POST',
+            headers: {'content-type':'application/json'},
+            body: JSON.stringify(id)
+          })
+          const response = await methodCrud.json();
+
+          return response
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new Error(error.message)
+          }
+        }
+      }
 
 
 
 
 
       //pruebas
+
+
+      //modalPassword
       async postModal(data: FieldValues){
         try {
           const methodCrud = await fetch(`http://localhost:3000/modal`, {
@@ -259,29 +419,7 @@ class Services {
             });
 
             if (!methodCrud.ok) {
-              throw new Error('Error en la peticion');
-            }
-
-            const response = await methodCrud.json();
-
-            return response
-      } catch (error) {
-          if (error instanceof Error) {
-              throw new Error(error.message);
-            }
-      }
-      }
-
-      async postDelete(data: object){
-        try {
-          const methodCrud = await fetch(`http://localhost:3000/modal`, {
-              method: 'POST',
-              headers: { 'content-type': 'application/json' },
-              body: JSON.stringify(data),
-            });
-
-            if (!methodCrud.ok) {
-              throw new Error('Error en la peticion');
+              throw new Error('error con la contraseña');
             }
 
             const response = await methodCrud.json();
