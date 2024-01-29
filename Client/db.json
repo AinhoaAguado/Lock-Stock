@@ -76,9 +76,21 @@
       "Email_Aplication": "$2a$10$.KDHjcHS2sUM6AkZegw9dutKfxba6EVQAKO3HYkZZvBF1dD0hLAc2",
       "Name_User": "$2a$10$hU/hZqrhkVDmhgkZsg75a.c0m8/Taad9p9EOI0VD3QL.2ToQMR77q",
       "Password_Aplication": "$2a$10$kzbyXGJsKOY.wndkY4Zt2.Sll9KF5n9kQDZ/cuuKrMNW6QcJKtiLS"
+    },
+    {
+      "id": "8850",
+      "Name_Aplication": "$2a$10$l6ez23OLlt0pCj7G7NB5rOebS77MUFkVeQjICLoLwrDrgRgLvWtIe",
+      "Email_Aplication": "$2a$10$SkPLbB2KOFIrMNAXVBH.FuL2ZyQY0I8XE/4sG7SZud1tR5v9oAquW",
+      "Name_User": "$2a$10$rQeON2z/F2w4iUNf7XEHRuThgWH8074A1vvT62btLXmhJdVwl2iDe",
+      "Password_Aplication": "$2a$10$1Nb.hk35y0eWsjtyB7CQXev.uaryFUse0yEsrSFT54t4ncZmKzxYu"
     }
   ],
   "Notifications_User": [
+    {
+      "message": "mensaje 1",
+      "boolean": false,
+      "id": "1"
+    },
     {
       "message": "mensaje 1",
       "boolean": false,
@@ -652,6 +664,19 @@
       "id": "0667",
       "answerSegurity": "hola",
       "response": "lunes"
+    },
+    {
+      "id": "542d",
+      "password": "$2a$10$Z9Ym/s3GBzPvzpqLAzwqvOIKOsAAbJTCiEO.hxab3a3eoJ/nsfKO."
+    },
+    {
+      "id": "$2a$10$uO4ijvUM.QORni0LV10oBuaE.6s8o40fSyDKafygxwYurY1xiQeai"
+    },
+    {
+      "id": "$2a$10$HFWqCNIleviHdtCjlmhS3.l16Qf8zdZ/yPRfXg.EwtUEj7qGtkQm2"
+    },
+    {
+      "id": "$2a$10$l/TLzbQ9jZ8oJGc7rvqVpuNSmVSMJ5kZ9h7c2QCS3VbYhPYgEHSvm"
     }
   ],
   "dashboardAdmin": [

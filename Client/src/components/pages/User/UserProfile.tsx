@@ -155,16 +155,7 @@ const UserProfile = (): React.JSX.Element => {
       <img src="/src/images/check-icon.svg" alt="edit-icon" />
     </figure>
 
-    <figure
-      className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
-      onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}
-    >
-      <img
-        src="/src/images/eliminar-icon.svg"
-        alt="delete-icon"
-        className="cursor-pointer hover:bg-primary rounded"
-      />
-    </figure>
+
   </td>
 </tr>
 
@@ -207,13 +198,6 @@ const UserProfile = (): React.JSX.Element => {
                       />
                     </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center" 
-                    onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}>
-                      <img
-                        src="/src/images/eliminar-icon.svg"
-                        alt="delete-icon"
-                      />
-                    </figure>
                   </td>
                 </tr>
 
@@ -261,14 +245,7 @@ const UserProfile = (): React.JSX.Element => {
                       />
                     </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
-                    onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}
-                    >
-                      <img
-                        src="/src/images/eliminar-icon.svg"
-                        alt="delete-icon"
-                      />
-                    </figure>
+                  
                   </td>
                 </tr>
 
@@ -309,15 +286,7 @@ const UserProfile = (): React.JSX.Element => {
                       />
                     </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
-                    onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}
-                    >
-                      <img
-                        src="/src/images/eliminar-icon.svg"
-                        alt="delete-icon"
-                        className="cursor-pointer hover:bg-primary rounded flex justify-center items-center"
-                      />
-                    </figure>
+          
                   </td>
                 </tr>
 
@@ -354,15 +323,7 @@ const UserProfile = (): React.JSX.Element => {
                       />
                     </figure>
 
-                    <figure className="h-8 w-8 p-1 cursor-pointer hover:bg-primary rounded flex justify-center items-center"
-                    onClick={() => (edit ? console.log('hola mundo') : setModal('fixed'))}
-                    >
-                      <img
-                        src="/src/images/eliminar-icon.svg"
-                        alt="delete-icon"
-                        className="cursor-pointer hover:bg-primary rounded"
-                      />
-                    </figure>
+            
                   </td>
                 </tr>
               </table>
