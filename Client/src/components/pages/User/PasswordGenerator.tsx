@@ -289,14 +289,17 @@ useEffect(() => {
                       defaultValue={aplication.Name_User}
                       {...register("Name_User", {
                         onChange: (e) => setTextName(e.target.value),
-                        pattern: /^[a-zA-Z]+$/,
+                        pattern: {
+                          value: /^[a-zA-Z]+$/,
+                          message: 'el nombre de usuario es requerido'
+                        },
+                        required: {
+                          value: true,
+                          message: 'el nombre es requerido'
+                        }
                       })}
                     />
-                    {errors.Name_User && (
-                      <p className="text-red-500 font-medium">
-                        nombre de usuario invalido
-                      </p>
-                    )}
+        
                     <img
                       src="/src/images/copy-icon.svg"
                       alt="copy-icon"
@@ -304,6 +307,11 @@ useEffect(() => {
                       onClick={() => handleCopy(textName)}
                     />
                   </div>
+                  {errors.Name_User && (
+                      <p className="text-red-500 font-medium text-xl">
+                        {errors.Name_User.message}
+                      </p>
+                    )}
 
                   <label
                     htmlFor="password_aplication"
@@ -318,9 +326,22 @@ useEffect(() => {
                       defaultValue={textPassword}
                       id="password_aplication"
                       {...register("Password_Aplication", {
-                        onChange: (e) => setTextPassword(e.target.value),
+                        pattern: {
+                          value: /^(?:(?!['"%]).)*$/, // Regex para excluir ', ", %
+                          message: 'La contraseña no puede contener los caracteres \' " %',
+                        },
+                        required: 'La contraseña es requerida',
+                        maxLength: {
+                          value: 20,
+                          message: 'La contraseña debe tener como máximo 20 caracteres',
+                        },
+                        minLength: {
+                          value: 8,
+                          message: 'La contraseña debe tener al menos 8 caracteres',
+                        },
                       })}
                     />
+              
 
                     <img
                       src="/src/images/eye-icon.svg"
@@ -336,6 +357,11 @@ useEffect(() => {
                       onClick={() => handleCopy(textPassword)}
                     />
                   </div>
+                  {errors.Password_Aplication && (
+                      <p className="text-red-500 font-medium text-xl">
+                        {errors.Password_Aplication.message}
+                      </p>
+                    )}
 
                   <div className="flex gap-5">
                     <input

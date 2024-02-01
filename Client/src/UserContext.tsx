@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import React from 'react'
 import { servicesApp } from "./services/services";
 
@@ -9,7 +9,7 @@ export const usersContext = createContext();
 
 
 
-const UserContext = ({children}) => {
+const UserContext = ({ children }: {children: ReactNode}): React.JSX.Element => {
   const id = "323e4567-e89b-12d3-a456-426614174003";
 
   const [ user, setUser ] = useState('')
