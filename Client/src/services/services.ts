@@ -3,6 +3,25 @@ import { FieldValues } from "react-hook-form";
 class Services {
   constructor() {}
 
+  async recoverPassword (formData: FieldValues){
+    try {
+      const methoudCrud = await fetch('añadir url',{
+        method: 'POST',
+        headers: {'content-type':'application/json'},
+        body: JSON.stringify(formData)
+      })
+      const response = await methoudCrud.json();
+      return response;
+    } catch (error) {
+      if (error instanceof Error) {
+        throw new Error(`message: ${error.message}`);
+        
+      }
+    }
+  }
+
+
+
   //profile
   async getProfile() {
     try {

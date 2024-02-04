@@ -15,11 +15,11 @@ import UserProfile from "../components/pages/User/UserProfile";
 import ConnectedDevices from "../components/pages/User/ConnectedDevices";
 import React from "react";
 import { servicesApp } from "../services/services";
-import TokenAccess from "../TokenAccess";
 import RecoverPasswordForm from "../components/pages/User/RecoverPasswordForm";
 import AccountsUser from "../components/pages/User/AccountsUser";
 import Terms from "../components/pages/User/Terms";
 import RegisterLogin from "../components/pages/User/RegisterLogin";
+import RecoverPassword from "../components/pages/User/RecoverPassword";
 
 
 export const router = createBrowserRouter([
@@ -29,11 +29,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/authentication-page',
-                element: <TokenAccess><RegisterLogin /></TokenAccess>
+                element: <RegisterLogin />
             },
             {
                 path: '/password-master',
-                element: <TokenAccess><PasswordMasterForm /></TokenAccess>
+                element: <PasswordMasterForm />
             },
             {
                 path: 'terms',
@@ -41,30 +41,30 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/help',
-                element: <TokenAccess><Help/></TokenAccess>
+                element: <Help/>
             },
             {
                 path:'/how-use',
-                element: <TokenAccess><HowUse/></TokenAccess>
+                element: <HowUse/>
             },
             {
                 path: 'user-profile',
-                element: <TokenAccess><UserProfile /></TokenAccess>,
+                element: <UserProfile />,
                 loader: servicesApp.getProfile
             },
             {
                 path: 'connected-devices',
-                element: <TokenAccess><ConnectedDevices /></TokenAccess>
+                element: <ConnectedDevices />
 											  
             },
             {
                 path: 'notification-mailbox',
-                element: <TokenAccess><NotificationMailbox /></TokenAccess>,
+                element: <NotificationMailbox />,
                 loader: servicesApp.getNotifications
             },
             {
                 path: 'password-generator/:id?',
-                element: <TokenAccess><PasswordGenerator/></TokenAccess>,
+                element: <PasswordGenerator/>,
                 loader: servicesApp.getAccountsUser
             },
             {
@@ -75,6 +75,10 @@ export const router = createBrowserRouter([
                 path:'accounts-user',
                 element: <AccountsUser />,
                  loader: servicesApp.getAccountsUser
+            },
+            {
+                path: 'recover',
+                element: <RecoverPassword />
             }
         ],
     },
