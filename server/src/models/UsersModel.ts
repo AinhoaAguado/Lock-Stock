@@ -47,6 +47,12 @@ const UsersModel = db.define('Users', {
   loginAttempts: {
       type: DataTypes.INTEGER,
   },
+  TokenLogedUser: {
+    type: DataTypes.STRING(300),
+  },
+  ExpiryTokenDate: {
+  type: DataTypes.DATE(),
+  },
     Block_User: {
       type: DataTypes.BOOLEAN,
   },

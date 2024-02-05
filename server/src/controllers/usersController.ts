@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 import { sign } from "jsonwebtoken";
 //import validateMiddelwareUser from "../middlewares/validateMiddelwareUser"; comentado para desactivar temporalmente el middlware, al igual que en la ruta y el propio controlador
 import "dotenv/config";
-import { UserInterface } from '../../userInterface';
+import { UserInterface } from '../interfaces/userInterface';
 
 
 
@@ -42,17 +42,34 @@ export const usersGetById = async (req: Request, res: Response) => {
 
 export const usersPost = async (req: Request, res: Response) => {
   try {
+
+    const email = await UsersModel.findOne({
+      where: {
+       Email_User: req.body.Email_User,
+      },
+    }) as UserInterface | null;
+
+    if(email) {
+      res.status(400).json({menssagge: 'ya existe un usuario registrado con ese mail'})
+    }
+
     //validateMiddelwareUser(req.body); comentado para desactivar temporalmente el middlware, al igual que en la ruta y el propio controlador
     const userUuid = generateUuid();
     const hashedPassword_User = await bcrypt.hash(req.body.Password_User, 10);
     const hashedPassword_Master_User = await bcrypt.hash(req.body.Password_Master_User, 10);
+    // const deviceType = req.deviceInfo.deviceType;
     const SECRET_KEY = process.env.SECRET_KEY;
 
     if (!SECRET_KEY) {
       throw new Error("SECRET_KEY environment variable is not set");
     } else {
-      const token = sign({ userUuid }, SECRET_KEY, { expiresIn: "86400s" });
+      const token = sign({ userUuid }, SECRET_KEY, { expiresIn: "3600s" });
 
+      const hashedToken = await bcrypt.hash(token, 10);
+      const expiryDate = new Date();
+      expiryDate.setSeconds(expiryDate.getSeconds() + 7200); 
+      const Block_User = false;
+      
         await UsersModel.create({
         Id_User: userUuid,
         Password_User: hashedPassword_User,
@@ -66,14 +83,14 @@ export const usersPost = async (req: Request, res: Response) => {
         Device_User: req.body.Device_User,
         Notifications_User: req.body.Notifications_User,
         loginAttempts: 0,
-        Block_User: req.body.Block_User,
+        TokenLogedUser: hashedToken,
+        ExpiryTokenDate: expiryDate,
+        Block_User: Block_User,
         Delete_User: req.body.Delete_User,
-        //añadir fecha de creación/envío/conexión
-        //añadir ubicación de creación/envío/conexión
-        //almacenar token haseado y guardar en bbdd y volver a crear para incluir los nuevos datos. y llevar al modelo y middelware
-      }) ;
+        });
+        
 
-      res.status(201).json({ token });
+      res.status(201).json({ accessToken: token });
     }
   } catch (error) {
     if (error instanceof Error) {

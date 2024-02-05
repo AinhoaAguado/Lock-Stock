@@ -3,6 +3,7 @@ import AplicationsUsersModel from "../models/AplicationsUsersModel";
 
 export const usersGetApplications = async (_req: Request, res: Response) => {
     try {
+      
       // validateTokenMiddleware(req, res, async () => {
       const users = await AplicationsUsersModel.findAll();
       res.status(200).json(users);

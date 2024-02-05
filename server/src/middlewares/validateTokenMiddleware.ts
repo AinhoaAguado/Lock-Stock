@@ -5,8 +5,8 @@ import {  Response, NextFunction } from "express";
 import bcrypt from "bcrypt";
 import "dotenv/config";
 import UsersModel from "../models/UsersModel";
-import { UserInterface } from "../userInterface";
-import InterfaceUser from "../userInterface";
+import { UserInterface } from "../interfaces/userInterface";
+import InterfaceUser from "../interfaces/userInterface";
 
 const validateTokenMiddleware = async (req: InterfaceUser, res: Response, next: NextFunction) => {
   try {

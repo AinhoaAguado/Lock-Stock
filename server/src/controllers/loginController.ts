@@ -2,11 +2,11 @@ import { Request, Response } from "express";
 import User from "../models/UsersModel";
 import { Op } from "sequelize";
 import bcrypt from "bcrypt";
-import jwt from 'jsonwebtoken';
+import jwt, { SignOptions } from 'jsonwebtoken';
 import LoginAttemptsModel from "../models/LoginAttempsModel";
-import { ILoginAttempt } from "../../loginAttempsInterface"; // Asumiendo que tienes un archivo de interfaces
+import { ILoginAttempt } from "../interfaces/loginAttempsInterface"; // Asumiendo que tienes un archivo de interfaces
 import { v4 as generateUuid } from 'uuid';
-import { UserInterface } from "../../userInterface"; // Asume que tienes una interfaz de usuario definida
+import { UserInterface } from "../interfaces/userInterface"; // Asume que tienes una interfaz de usuario definida
 
 // export const login = async (req: Request, res: Response) => {
 //   const { Email_User, Password_User } = req.body;
@@ -91,9 +91,19 @@ export const login = async (req: Request, res: Response) => {
     await createLoginAttempt(null, req); // Intento fallido
     return error400();
   }
+  
+  console.log("Usuario BLOQUEADO:", user.Block_User);
+  if (user.Block_User) {
+    await createLoginAttempt(user.Id_User, req);
+    await user.increment('loginAttempts'); 
+    res.status(400).json({ message: "Usuario bloqueadooooooooo" });
+    return;
+    // return error400();
+  }
+  
 
   if (!(await isPasswordValid(user, Password_User))) {
-    await handleFailedLoginAttempt(user, req);
+    await handleFailedLoginAttempt(user, req, res);
     return error400();
   }
 
@@ -114,33 +124,59 @@ async function isPasswordValid(user: UserInterface, password: string): Promise<b
   return bcrypt.compare(password, user.Password_User);
 }
 
-async function handleFailedLoginAttempt(user: UserInterface, req: Request): Promise<void> {
+async function handleFailedLoginAttempt(user: UserInterface, req: Request, res: Response): Promise<void | Response> {
   const maxAttempts = 5;
-  await user.increment('loginAttempts');
-  await user.reload();
+  await user.increment('loginAttempts');  
+  let currentAttempts = user.loginAttempts;
+  // await user.reload();
   console.log("Intentos de login después de incrementar:", user.loginAttempts);
+  console.log("Intentos de login después de incrementar - currentAttempts:", currentAttempts);
 
   await createLoginAttempt(user.Id_User, req);
-
-  if (user.loginAttempts >= maxAttempts) {
-    // Lógica para bloquear al usuario y enviar email
-    // ...
+  if (typeof currentAttempts === "number" && currentAttempts > maxAttempts) {
+    console.log("*************** Current Login: >5", currentAttempts);
+    // return error400;
+    return res.status(400).json({ message: "error en if mayor que 5"});
   }
+  
+  if (typeof currentAttempts === "number" && currentAttempts == maxAttempts) {
+    let tokenBlockUser = await generateUserToken(user, req);
+    console.log('**************USER:', user)
+    user.Block_User = true;
+    console.log('**************USER:', user)
+    await blockUser(user, tokenBlockUser);
+    await user.update(user);
+  }
+  console.log('**************USER:', "HOLA MUNDOOOOOOOOOOOOOOOOOO <5 ")
 }
+
 
 async function resetLoginAttempts(user: UserInterface): Promise<void> {
   await user.update({ loginAttempts: 0 });
 }
-
 async function generateUserToken(user: UserInterface, req: Request): Promise<string> {
-  const secretKey = process.env.SECRET_KEY!;
-  return jwt.sign({
-    Email_User: user.Email_User,
+  const SECRET_KEY = process.env.SECRET_KEY;
+  if (!SECRET_KEY) {
+    throw new Error("La clave secreta no está definida en las variables de entorno.");
+  }
+
+  // Incluye el Id_User como parte del payload del JWT
+  const tokenPayload = {
+    Id_User: user.Id_User,
+    // Email_User: user.Email_User,
     location: req.headers["x-forwarded-for"] || req.socket.remoteAddress,
     device: req.headers["user-agent"],
     connectionTime: new Date(),
-  }, secretKey, { expiresIn: "1h" });
+  };
+
+  const signOptions: SignOptions = {
+    expiresIn: "86400s" 
+  };
+
+  return jwt.sign(tokenPayload, SECRET_KEY, signOptions);
 }
+
+
 
 async function updateUserTokenInfo(user: UserInterface, token: string, req: Request): Promise<void> {
   const hashedToken = await bcrypt.hash(token, 10);
@@ -177,3 +213,38 @@ async function createLoginAttempt(userId: string | null, req: Request): Promise<
 
   await LoginAttemptsModel.create(loginAttemptData as any); // Ya no necesitas 'as any' si la interfaz coincide con el modelo
 }
+
+async function  blockUser(user: UserInterface, tokenBlockUser: string){
+  console.log('******************user:', user)
+  await user.update({
+    Block_User: true,
+    tokenLogedUser: tokenBlockUser
+  });
+}
+
+
+
+      // const transporter = nodemailer.createTransport({
+      //   service: process.env.EMAIL_SERVICE,
+      //   auth: {
+      //     user: process.env.EMAIL_ADMIN_Usr,
+      //     pass: process.env.EMAIL_ADMIN_Pss,
+      //   },
+      // });
+
+      // const mailOptions = {
+      //   from: process.env.EMAIL_ADMIN_Usr,
+      //   to: userInstance.Email_User,
+      //   subject: "Desbloquea tu cuenta",
+      //   text: `Hemos bloqueado tu usuario por un elevado número de intentos de inicio de sesión sin éxito. Si has sido tú, haz click en este enlace para desbloquear tu cuenta: ${process.env.FRONTEND_URL}/unblock/${token}`,
+      //   //enviar url de edsbloqueo y datos de ubicacion y dispositivo desde donde se bloqueo
+      // };
+      
+      // transporter.sendMail(mailOptions, (error, info) => {
+      //   if (error) {
+      //     console.log(error);
+      //   } else {
+      //     console.log(`Email sent: ${info.response}`);
+      //   }
+      // });
+      // return error400;
