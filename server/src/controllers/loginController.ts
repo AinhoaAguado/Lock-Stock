@@ -91,6 +91,18 @@ export const login = async (req: Request, res: Response) => {
     await createLoginAttempt(null, req); // Intento fallido
     return error400();
   }
+  console.log("VEMOS SI HAY TOKENLOGEDUSER:", user.TokenLogedUser)
+  console.log("VEMOS SI HAY ExpiryTokenDate:", user.ExpiryTokenDate)
+
+  if (user.TokenLogedUser && user.ExpiryTokenDate) {
+    const tokenExpirationDate = new Date(user.ExpiryTokenDate);
+    if (tokenExpirationDate < new Date()) {
+      await user.update({
+        ...user,
+        TokenLogedUser: ""
+      });
+    }
+  }
   
   console.log("Usuario BLOQUEADO:", user.Block_User);
   if (user.Block_User) {
@@ -129,10 +141,10 @@ async function handleFailedLoginAttempt(user: UserInterface, req: Request, res: 
   await user.increment('loginAttempts');  
   let currentAttempts = user.loginAttempts;
   // await user.reload();
-  console.log("Intentos de login después de incrementar:", user.loginAttempts);
   console.log("Intentos de login después de incrementar - currentAttempts:", currentAttempts);
 
   await createLoginAttempt(user.Id_User, req);
+
   if (typeof currentAttempts === "number" && currentAttempts > maxAttempts) {
     console.log("*************** Current Login: >5", currentAttempts);
     // return error400;
@@ -141,18 +153,18 @@ async function handleFailedLoginAttempt(user: UserInterface, req: Request, res: 
   
   if (typeof currentAttempts === "number" && currentAttempts == maxAttempts) {
     let tokenBlockUser = await generateUserToken(user, req);
-    console.log('**************USER:', user)
     user.Block_User = true;
     console.log('**************USER:', user)
     await blockUser(user, tokenBlockUser);
     await user.update(user);
+    return res.status(400).json({ message: "error en if igual a = 5"});
   }
-  console.log('**************USER:', "HOLA MUNDOOOOOOOOOOOOOOOOOO <5 ")
+  return res.status(400).json({ message: "************** error en if menor que 5    -  if <5 "});
 }
 
 
 async function resetLoginAttempts(user: UserInterface): Promise<void> {
-  await user.update({ loginAttempts: 0 });
+  await user.update({ ...user,loginAttempts: 0 });
 }
 async function generateUserToken(user: UserInterface, req: Request): Promise<string> {
   const SECRET_KEY = process.env.SECRET_KEY;
@@ -182,7 +194,7 @@ async function updateUserTokenInfo(user: UserInterface, token: string, req: Requ
   const hashedToken = await bcrypt.hash(token, 10);
   const location = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
   const locationString = Array.isArray(location) ? location.join(", ") : location;
-  await user.update({
+  await user.update({...user,
     hashedToken,
     location: locationString,
     device: req.headers["user-agent"],
@@ -215,10 +227,10 @@ async function createLoginAttempt(userId: string | null, req: Request): Promise<
 }
 
 async function  blockUser(user: UserInterface, tokenBlockUser: string){
-  console.log('******************user:', user)
-  await user.update({
+  console.log('******************userBlock:', user)
+  await user.update({...user,
     Block_User: true,
-    tokenLogedUser: tokenBlockUser
+    TokenLogedUser: tokenBlockUser
   });
 }
 

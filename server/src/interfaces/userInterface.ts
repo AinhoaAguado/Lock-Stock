@@ -6,8 +6,9 @@ import { Request } from "express";
         location?: string;
         device?: string;
         connectionTime?: Date;
-        Block_User?: boolean,
-        tokenLogedUser?: string
+        TokenLogedUser?: string;
+        ExpiryTokenDate?: Date;
+        Block_User?: boolean;
       }): unknown;
       get(): UserInterface;
       reload(): unknown;
