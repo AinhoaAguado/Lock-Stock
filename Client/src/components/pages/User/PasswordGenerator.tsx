@@ -109,6 +109,14 @@ return (
           <h1 className="text-primary text-3xl font-semibold">Añadir Cuenta</h1>
         </div>
 
+
+
+
+
+
+
+
+
         <section className="w-3/4 flex flex-col mx-auto gap-3">
           {/* Nombre de la aplicación */}
           <label htmlFor="name_aplication" className="flex flex-col w-full text-xl gap-1">

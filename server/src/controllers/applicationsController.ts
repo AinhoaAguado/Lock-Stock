@@ -9,6 +9,7 @@ import validateTokenMiddleware from "../middleware/validateTokenMiddleware";
 export const usersGetApplications = async (_req: Request, res: Response) => {
   try {
     const users = await AplicationsUsersModel.findAll();
+
     res.status(200).json(users);
   } catch (error) {
     res.status(500).json({ message: "Error al obtener las aplicaciones" });

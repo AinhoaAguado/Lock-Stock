@@ -44,6 +44,7 @@ const LoginCard: FC<LoginCardProps> = ({ switchToRegister, isActive }) => {
 
     if (response) {
       Navigate('/accounts-user')
+      localStorage.setItem('token', response.accessToken)
     }
 
   } catch (error) {
