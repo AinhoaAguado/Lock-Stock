@@ -175,19 +175,19 @@ const AccountsForm = (): React.JSX.Element => {
                   className="h-8 w-8"
                 />
               </figure>
-              <div className="text-black text-sm font-bold min-w-28 max-w-28">
+              <div className="text-black text-sm font-bold min-w-28 max-w-28 overflow-y-auto">
                 {item.Name_Aplication}
               </div>
-              <div className="text-black text-sm font-bold min-w-28 max-w-28">
+              <div className="text-black text-sm font-bold min-w-28 max-w-28 overflow-y-auto">
                 {item.Email_Aplication}
               </div>
-              <div className="text-black text-sm font-bold min-w-28 max-w-28">
+              <div className="text-black text-sm font-bold min-w-28 max-w-28 overflow-y-auto">
                 {item.Category_Aplication}
               </div>
 
 
 
-              <div className="text-black text-sm font-bold min-w-28 max-w-28">
+              <div className="text-black text-sm font-bold min-w-28 max-w-28 overflow-y-auto">
                 {view? '**********' : item.Password_Aplication}
               </div>
 
