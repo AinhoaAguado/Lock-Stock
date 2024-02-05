@@ -93,15 +93,20 @@ export const login = async (req: Request, res: Response) => {
   }
   console.log("VEMOS SI HAY TOKENLOGEDUSER:", user.TokenLogedUser)
   console.log("VEMOS SI HAY ExpiryTokenDate:", user.ExpiryTokenDate)
-
+  console.log("FECHA ACTUAL:", new Date())
+  
   if (user.TokenLogedUser && user.ExpiryTokenDate) {
     const tokenExpirationDate = new Date(user.ExpiryTokenDate);
-    if (tokenExpirationDate < new Date()) {
+    let currentDate = new Date();
+    currentDate.setSeconds(currentDate.getSeconds() + 7200);
+    if (tokenExpirationDate < currentDate) {
       await user.update({
         ...user,
         TokenLogedUser: ""
       });
     }
+    let isExpiry = (tokenExpirationDate < new Date())
+    console.log(" **** ¿ya ha expirado el token?", isExpiry)
   }
   
   console.log("Usuario BLOQUEADO:", user.Block_User);
