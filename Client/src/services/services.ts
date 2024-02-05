@@ -143,7 +143,7 @@ class Services {
     }
   }
 
-  async updateUserProfile(data, userId, token) {
+  async updateUserProfile(data: FieldValues, userId: string, token: string) {
     try {
       const response = await fetch(`http://localhost:4000/users/${userId}`, { // Asegúrate de que el puerto sea el correcto.
         method: "PUT", 
@@ -160,7 +160,9 @@ class Services {
   
       return await response.json();
     } catch (error) {
-      throw new Error(error.message);
+      if (error instanceof Error) {
+        throw new Error(error.message);        
+      }
     }
   }
   
@@ -168,7 +170,7 @@ class Services {
 
   //password generator
 
-  async putAccountUser(id, data: FieldValues) {
+  async putAccountUser(id: string, data: FieldValues) {
     try {
       console.log(id);
       const methodCrud = await fetch(`http://localhost:4000/applications/${id}`, {
@@ -194,7 +196,7 @@ class Services {
 
 // En tu archivo services.ts
 
-async postApplication(data) {
+async postApplication(data: FieldValues) {
   const accessToken = sessionStorage.getItem('accessToken');
   if (!accessToken) {
     throw new Error('Authentication token not found');
@@ -406,7 +408,7 @@ async postApplication(data) {
   }
 
   //DashboardAdmin
-  async deleteDashboardAdmin(id) {
+  async deleteDashboardAdmin(id: string) {
     try {
       const methodCrud = await fetch(`http://localhost:3000/modal`, {
         method: "POST",
@@ -422,7 +424,7 @@ async postApplication(data) {
     }
   }
 
-  async blockDashboardAdmin(id) {
+  async blockDashboardAdmin(id: string) {
     try {
       const methodCrud = await fetch(`http://localhost:3000/modal`, {
         method: "POST",

@@ -9,6 +9,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import loginSchema from '../pages/User/validations/loginForm';
 import { useNavigate } from 'react-router';
 import  {jwtDecode}  from 'jwt-decode';
+import { Link } from 'react-router-dom';
 
 
 
@@ -57,15 +58,17 @@ const LoginCard: FC<LoginCardProps> = ({ switchToRegister, isActive }) => {
     resolver: zodResolver(loginSchema)
   });
 
-  const registerColor = !isActive ? "#1D7607" : "black";
+  const registerColor = !isActive ? "#1D7607 cursor-pointer" : "black cursor-pointer";
   const loginColor = isActive ? "#1D7607" : "black";
 
   return (
     <form onSubmit={handleSubmit(handleEmailLogin)}>
     <div className="card-container p-4 bg-white rounded-lg shadow-md flex flex-col">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-bold" onClick={switchToRegister} style={{ color: registerColor }}>Regístrate</h2>
-        <h1 className="text-lg font-bold" style={{ color: loginColor }}>Iniciar Sesión</h1>
+        <h2 className="text-lg font-bold cursor-pointer" onClick={switchToRegister} style={{ color: registerColor }}
+        
+        >Regístrate</h2>
+        <h1 className="text-lg font-bold cursor-pointer" style={{ color: loginColor }}>Iniciar Sesión</h1>
       </div>
       {/* <GoogleSignInButton /> */}
    
@@ -91,7 +94,7 @@ const LoginCard: FC<LoginCardProps> = ({ switchToRegister, isActive }) => {
       </section>
 
       <div className="flex justify-end">
-        <a href="#" className="font-semibold text-sm text-[#1D7607] hover:underline mt-4">¿Olvidaste tu contraseña?</a>
+        <Link to={'/recover'} className="font-semibold text-sm text-[#1D7607] hover:underline mt-4">¿Olvidaste tu contraseña?</Link>
       </div>
 
     </div>

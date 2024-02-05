@@ -379,7 +379,8 @@
   ],
   "modal": [
     {
-      "response": true
+      "response": true,
+      "id": "a490"
     },
     {
       "id": "bda7",
@@ -677,6 +678,14 @@
     },
     {
       "id": "$2a$10$l/TLzbQ9jZ8oJGc7rvqVpuNSmVSMJ5kZ9h7c2QCS3VbYhPYgEHSvm"
+    },
+    {
+      "id": "6c59",
+      "password": "$2a$10$AcB1rlWVqoNw7l9ymde.7euGZ16XlbCRWN8yfKmyxKz2rEKGp24zO"
+    },
+    {
+      "id": "b8af",
+      "password": "$2a$10$PKYhmrBgPOUkRcXcLZan5uppKGGKQJ4KJmbgDvDxvoAFcrmXLr1AO"
     }
   ],
   "dashboardAdmin": [
@@ -823,7 +832,8 @@
       "ipAddress": "193.00.00.01",
       "os": "IOS",
       "registrationDate": "23/11/2023",
-      "lastConnection": "23/11/2023@11:07:03"
+      "lastConnection": "23/11/2023@11:07:03",
+      "id": "6637"
     },
     {
       "name": "JohnDoe",
@@ -831,7 +841,8 @@
       "ipAddress": "192.168.0.15",
       "os": "Android",
       "registrationDate": "24/11/2023",
-      "lastConnection": "24/11/2023@12:30:45"
+      "lastConnection": "24/11/2023@12:30:45",
+      "id": "4f9b"
     },
     {
       "name": "AliceSmith",
@@ -839,7 +850,8 @@
       "ipAddress": "10.0.0.5",
       "os": "Windows",
       "registrationDate": "25/11/2023",
-      "lastConnection": "25/11/2023@14:45:20"
+      "lastConnection": "25/11/2023@14:45:20",
+      "id": "7e34"
     },
     {
       "name": "BobJohnson",
@@ -847,7 +859,8 @@
       "ipAddress": "172.16.0.1",
       "os": "Linux",
       "registrationDate": "26/11/2023",
-      "lastConnection": "26/11/2023@16:20:10"
+      "lastConnection": "26/11/2023@16:20:10",
+      "id": "8d7e"
     },
     {
       "name": "SophieBrown",
@@ -855,7 +868,8 @@
       "ipAddress": "192.168.1.10",
       "os": "MacOS",
       "registrationDate": "27/11/2023",
-      "lastConnection": "27/11/2023@18:10:30"
+      "lastConnection": "27/11/2023@18:10:30",
+      "id": "90bc"
     },
     {
       "name": "MikeJohnson",
@@ -863,7 +877,8 @@
       "ipAddress": "10.0.0.15",
       "os": "Windows",
       "registrationDate": "28/11/2023",
-      "lastConnection": "28/11/2023@09:45:55"
+      "lastConnection": "28/11/2023@09:45:55",
+      "id": "4931"
     },
     {
       "name": "EvaWilliams",
@@ -871,7 +886,8 @@
       "ipAddress": "172.16.1.5",
       "os": "Linux",
       "registrationDate": "29/11/2023",
-      "lastConnection": "29/11/2023@11:30:22"
+      "lastConnection": "29/11/2023@11:30:22",
+      "id": "f5e1"
     },
     {
       "name": "DanielMiller",
@@ -879,7 +895,8 @@
       "ipAddress": "192.168.2.20",
       "os": "MacOS",
       "registrationDate": "30/11/2023",
-      "lastConnection": "30/11/2023@14:15:17"
+      "lastConnection": "30/11/2023@14:15:17",
+      "id": "6df4"
     },
     {
       "name": "EmmaDavis",
@@ -887,7 +904,8 @@
       "ipAddress": "10.0.1.25",
       "os": "Android",
       "registrationDate": "01/12/2023",
-      "lastConnection": "01/12/2023@16:50:40"
+      "lastConnection": "01/12/2023@16:50:40",
+      "id": "ba76"
     },
     {
       "name": "DavidMoore",
@@ -895,7 +913,8 @@
       "ipAddress": "172.16.2.10",
       "os": "IOS",
       "registrationDate": "02/12/2023",
-      "lastConnection": "02/12/2023@18:40:19"
+      "lastConnection": "02/12/2023@18:40:19",
+      "id": "a881"
     },
     {
       "name": "SophiaMartin",
@@ -903,7 +922,8 @@
       "ipAddress": "192.168.3.30",
       "os": "Windows",
       "registrationDate": "03/12/2023",
-      "lastConnection": "03/12/2023@09:30:12"
+      "lastConnection": "03/12/2023@09:30:12",
+      "id": "e6c0"
     },
     {
       "name": "MatthewThompson",
@@ -911,7 +931,8 @@
       "ipAddress": "10.0.2.18",
       "os": "Linux",
       "registrationDate": "04/12/2023",
-      "lastConnection": "04/12/2023@11:20:48"
+      "lastConnection": "04/12/2023@11:20:48",
+      "id": "b4f7"
     },
     {
       "name": "OliviaClark",
@@ -919,7 +940,8 @@
       "ipAddress": "172.16.3.5",
       "os": "MacOS",
       "registrationDate": "05/12/2023",
-      "lastConnection": "05/12/2023@14:10:37"
+      "lastConnection": "05/12/2023@14:10:37",
+      "id": "d687"
     },
     {
       "name": "JamesWard",
@@ -927,7 +949,8 @@
       "ipAddress": "192.168.4.25",
       "os": "IOS",
       "registrationDate": "06/12/2023",
-      "lastConnection": "06/12/2023@16:00:59"
+      "lastConnection": "06/12/2023@16:00:59",
+      "id": "5f1b"
     },
     {
       "name": "LilyPerez",
@@ -935,7 +958,8 @@
       "ipAddress": "10.0.3.12",
       "os": "Android",
       "registrationDate": "07/12/2023",
-      "lastConnection": "07/12/2023@17:50:24"
+      "lastConnection": "07/12/2023@17:50:24",
+      "id": "7e36"
     },
     {
       "name": "BenjaminBaker",
@@ -943,7 +967,8 @@
       "ipAddress": "172.16.4.30",
       "os": "Windows",
       "registrationDate": "08/12/2023",
-      "lastConnection": "08/12/2023@09:30:15"
+      "lastConnection": "08/12/2023@09:30:15",
+      "id": "6809"
     },
     {
       "name": "ChloeStewart",
@@ -951,7 +976,8 @@
       "ipAddress": "192.168.5.15",
       "os": "Linux",
       "registrationDate": "09/12/2023",
-      "lastConnection": "09/12/2023@11:20:55"
+      "lastConnection": "09/12/2023@11:20:55",
+      "id": "a545"
     },
     {
       "name": "LoganFisher",
@@ -959,7 +985,8 @@
       "ipAddress": "10.0.4.22",
       "os": "MacOS",
       "registrationDate": "10/12/2023",
-      "lastConnection": "10/12/2023@14:10:44"
+      "lastConnection": "10/12/2023@14:10:44",
+      "id": "7727"
     },
     {
       "name": "MiaBarnes",
@@ -967,7 +994,8 @@
       "ipAddress": "172.16.5.8",
       "os": "IOS",
       "registrationDate": "11/12/2023",
-      "lastConnection": "11/12/2023@16:00:37"
+      "lastConnection": "11/12/2023@16:00:37",
+      "id": "5798"
     }
   ],
   "dashboardIncidents": [
@@ -978,7 +1006,8 @@
       "os": "Windows",
       "registrationDate": "24/01/2024",
       "lastConnection": "24/01/2024@14:30:45",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "b563"
     },
     {
       "name": "Usuario2",
@@ -987,7 +1016,8 @@
       "os": "Linux",
       "registrationDate": "23/01/2024",
       "lastConnection": "23/01/2024@20:15:22",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "4025"
     },
     {
       "name": "Usuario3",
@@ -996,7 +1026,8 @@
       "os": "Mac",
       "registrationDate": "22/01/2024",
       "lastConnection": "22/01/2024@10:45:12",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "b31d"
     },
     {
       "name": "Usuario4",
@@ -1005,7 +1036,8 @@
       "os": "Windows",
       "registrationDate": "21/01/2024",
       "lastConnection": "21/01/2024@16:22:30",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "d8d5"
     },
     {
       "name": "Usuario5",
@@ -1014,7 +1046,8 @@
       "os": "Linux",
       "registrationDate": "20/01/2024",
       "lastConnection": "20/01/2024@12:10:55",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "e745"
     },
     {
       "name": "Usuario6",
@@ -1023,7 +1056,8 @@
       "os": "Mac",
       "registrationDate": "19/01/2024",
       "lastConnection": "19/01/2024@08:05:40",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "b771"
     },
     {
       "name": "Usuario7",
@@ -1032,7 +1066,8 @@
       "os": "Windows",
       "registrationDate": "18/01/2024",
       "lastConnection": "18/01/2024@14:50:20",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "b2cc"
     },
     {
       "name": "Usuario8",
@@ -1041,7 +1076,8 @@
       "os": "Linux",
       "registrationDate": "17/01/2024",
       "lastConnection": "17/01/2024@20:35:45",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "8fd8"
     },
     {
       "name": "Usuario9",
@@ -1050,7 +1086,8 @@
       "os": "Mac",
       "registrationDate": "16/01/2024",
       "lastConnection": "16/01/2024@10:20:30",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "5bc2"
     },
     {
       "name": "Usuario10",
@@ -1059,7 +1096,8 @@
       "os": "Windows",
       "registrationDate": "15/01/2024",
       "lastConnection": "15/01/2024@16:15:55",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "fe99"
     },
     {
       "name": "Usuario11",
@@ -1068,7 +1106,8 @@
       "os": "Linux",
       "registrationDate": "14/01/2024",
       "lastConnection": "14/01/2024@12:05:20",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "c2a1"
     },
     {
       "name": "Usuario12",
@@ -1077,7 +1116,8 @@
       "os": "Mac",
       "registrationDate": "13/01/2024",
       "lastConnection": "13/01/2024@08:00:45",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "3933"
     },
     {
       "name": "Usuario13",
@@ -1086,7 +1126,8 @@
       "os": "Windows",
       "registrationDate": "12/01/2024",
       "lastConnection": "12/01/2024@14:50:10",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "7883"
     },
     {
       "name": "Usuario14",
@@ -1095,7 +1136,8 @@
       "os": "Linux",
       "registrationDate": "11/01/2024",
       "lastConnection": "11/01/2024@20:35:35",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "5abc"
     },
     {
       "name": "Usuario15",
@@ -1104,7 +1146,8 @@
       "os": "Mac",
       "registrationDate": "10/01/2024",
       "lastConnection": "10/01/2024@10:20:20",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "2ba2"
     },
     {
       "name": "Usuario16",
@@ -1113,7 +1156,8 @@
       "os": "Windows",
       "registrationDate": "09/01/2024",
       "lastConnection": "09/01/2024@16:15:45",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "3b50"
     },
     {
       "name": "Usuario17",
@@ -1122,7 +1166,8 @@
       "os": "Linux",
       "registrationDate": "08/01/2024",
       "lastConnection": "08/01/2024@12:05:10",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "4d31"
     },
     {
       "name": "Usuario18",
@@ -1131,7 +1176,8 @@
       "os": "Mac",
       "registrationDate": "07/01/2024",
       "lastConnection": "07/01/2024@08:00:35",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "3beb"
     },
     {
       "name": "Usuario19",
@@ -1140,7 +1186,8 @@
       "os": "Windows",
       "registrationDate": "06/01/2024",
       "lastConnection": "06/01/2024@14:50:20",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "842a"
     },
     {
       "name": "Usuario20",
@@ -1149,146 +1196,174 @@
       "os": "Linux",
       "registrationDate": "05/01/2024",
       "lastConnection": "05/01/2024@20:35:45",
-      "alertIcon": "/src/images/alert-icon.svg"
+      "alertIcon": "/src/images/alert-icon.svg",
+      "id": "0445"
     }
   ],
   "notifications": [
     {
       "message": "Nueva Contraseña",
       "icon": true,
-      "color": "white"
+      "color": "white",
+      "id": "6663"
     },
     {
       "message": "Nueva Contraseña",
       "icon": true,
-      "color": "yellow"
+      "color": "yellow",
+      "id": "c555"
     },
     {
       "message": "Nueva Contraseña",
       "icon": false,
-      "color": "white"
+      "color": "white",
+      "id": "7c9b"
     },
     {
       "message": "Nueva Contraseña",
       "icon": true,
-      "color": "yellow"
+      "color": "yellow",
+      "id": "c359"
     },
     {
       "message": "Nueva Contraseña",
       "icon": false,
-      "color": "white"
+      "color": "white",
+      "id": "c4da"
     },
     {
       "message": "Nueva Contraseña",
       "icon": false,
-      "color": "yellow"
+      "color": "yellow",
+      "id": "6e28"
     },
     {
       "message": "Nueva Contraseña",
       "icon": false,
-      "color": "yellow"
+      "color": "yellow",
+      "id": "cdad"
     }
   ],
   "devices": [
     {
       "movil": "Samsung Galaxy S21",
       "fecha": "05/12/2023 12:30",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "380f"
     },
     {
       "movil": "Google Pixel 6",
       "fecha": "06/12/2023 08:45",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "fda0"
     },
     {
       "movil": "OnePlus 9 Pro",
       "fecha": "07/12/2023 17:20",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "5ffe"
     },
     {
       "movil": "iPhone 13 Pro",
       "fecha": "08/12/2023 14:05",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "7ca8"
     },
     {
       "movil": "Huawei P40",
       "fecha": "09/12/2023 11:55",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "39b5"
     },
     {
       "movil": "Motorola Edge",
       "fecha": "10/12/2023 09:40",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "7dbf"
     },
     {
       "movil": "Xiaomi Mi 11",
       "fecha": "11/12/2023 18:15",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "e24f"
     },
     {
       "movil": "Sony Xperia 1 III",
       "fecha": "12/12/2023 13:00",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "800b"
     },
     {
       "movil": "LG Velvet",
       "fecha": "13/12/2023 10:50",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "f582"
     },
     {
       "movil": "Nokia 9 PureView",
       "fecha": "14/12/2023 08:35",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "53af"
     },
     {
       "movil": "Samsung Galaxy Note 20",
       "fecha": "15/12/2023 17:10",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "4eec"
     },
     {
       "movil": "Google Pixel 5",
       "fecha": "16/12/2023 13:55",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "3823"
     },
     {
       "movil": "OnePlus 8T",
       "fecha": "17/12/2023 11:45",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "e8d7"
     },
     {
       "movil": "iPhone 12",
       "fecha": "18/12/2023 10:30",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "9ba7"
     },
     {
       "movil": "Huawei Mate 40 Pro",
       "fecha": "19/12/2023 08:20",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "22f9"
     },
     {
       "movil": "Motorola Moto G Power",
       "fecha": "20/12/2023 17:00",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "8b73"
     },
     {
       "movil": "Xiaomi Redmi Note 9",
       "fecha": "21/12/2023 12:45",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "ca65"
     },
     {
       "movil": "Sony Xperia 10 III",
       "fecha": "22/12/2023 10:35",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "322f"
     },
     {
       "movil": "LG G8 ThinQ",
       "fecha": "23/12/2023 09:20",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "7313"
     },
     {
       "movil": "Nokia 7.2",
       "fecha": "24/12/2023 18:00",
-      "delete": "/src/images/eliminar-icon.svg"
+      "delete": "/src/images/eliminar-icon.svg",
+      "id": "ea0f"
     }
   ]
 }
