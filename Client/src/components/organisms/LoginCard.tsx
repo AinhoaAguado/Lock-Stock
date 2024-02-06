@@ -8,8 +8,9 @@ import { servicesApp } from '../../services/services';
 import { zodResolver } from '@hookform/resolvers/zod';
 import loginSchema from '../pages/User/validations/loginForm';
 import { useNavigate } from 'react-router';
-import  {jwtDecode}  from 'jwt-decode';
+// import  {jwtDecode}  from 'jwt-decode';
 import { Link } from 'react-router-dom';
+import { jwtDecode } from "jwt-decode";
 
 
 
@@ -30,21 +31,15 @@ const LoginCard: FC<LoginCardProps> = ({ switchToRegister, isActive }) => {
   try {
     
     const response = await servicesApp.login(data) 
-    
+    const token = jwtDecode(response.token)
     
     console.log(data);
     console.log(response);
 
-    const token = sessionStorage.getItem('accessToken')
-    if (token) {
-      const decodedToken = jwtDecode(token);
-      console.log('Id_User:', decodedToken.Id_User);
-    }
-    
+   
 
     if (response) {
-      Navigate('/accounts-user')
-      localStorage.setItem('token', response.accessToken)
+      Navigate('/accounts-user');
     }
 
   } catch (error) {

@@ -20,8 +20,7 @@ import UserActivity from "../src/components/pages/Admin/UserActivity";
 
   
   describe('rendering User', () => { 
-  
-
+   
     //USER
       test('render Terms', () => { 
            const { asFragment } = render(<Terms />);

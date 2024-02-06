@@ -4,6 +4,11 @@ import ModalPasswordMaster from "../templates/modalPasswordMaster";
 import { servicesApp } from "../../services/services";
 import { hashData } from "../../services/hash";
 import { FieldValues } from "react-hook-form";
+import { jwtDecode } from "jwt-decode";
+// import jwt from 'jsonwebtoken';
+// import dotenv from 'dotenv';
+// dotenv.config();
+
 
 const AccountsForm = (): React.JSX.Element => {
 
@@ -21,7 +26,7 @@ const AccountsForm = (): React.JSX.Element => {
     setModal((prevModal) => (prevModal === "hidden" ? "fixed" : "hidden"));
   };
 
-  
+
 
 
   //filtro 
@@ -49,6 +54,13 @@ const AccountsForm = (): React.JSX.Element => {
 
     const postConfirmPassword = async (data: FieldValues) => {
       try {
+
+
+
+        const token = sessionStorage.getItem('token');
+        const tokendecode = jwtDecode(token);
+
+      
 
         //enviar contraseña del modal hasheada
         const { passwordMaster } = data;

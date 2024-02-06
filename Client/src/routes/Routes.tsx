@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
         element: <Root />,
         children: [
             {
-                path: '/',
+                path: '/login',
                 element: <RegisterLogin />
             },
             {
@@ -65,6 +65,7 @@ export const router = createBrowserRouter([
             {
                 path: 'password-generator/:id?',
                 element: <PasswordGenerator/>,
+                loader: servicesApp.getAccountsUser
             },
             {
                 path: 'recovery-password',

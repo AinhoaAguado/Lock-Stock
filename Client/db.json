@@ -686,6 +686,22 @@
     {
       "id": "b8af",
       "password": "$2a$10$PKYhmrBgPOUkRcXcLZan5uppKGGKQJ4KJmbgDvDxvoAFcrmXLr1AO"
+    },
+    {
+      "id": "4b9d",
+      "password": "$2a$10$By65B9GlkxGqnZynuzIys.M/kpLqwpS94pCAoj9srVCUckKQq0D2m"
+    },
+    {
+      "id": "144f",
+      "password": "$2a$10$vci.BYXS5FSZXBnmpToqM.YKeZN3w.Zrn5DA7CNsdVqQEMnqtM.8m"
+    },
+    {
+      "id": "53fd",
+      "password": "$2a$10$gWjLOMAhEnN4bTjrdSAMwORDJSuAyk22kpP6PhDK8c2Yh/o7TTsi6"
+    },
+    {
+      "id": "2a34",
+      "password": "$2a$10$k/j2XtXqqVmPzXB0oLicweJtOXWKP0ADwmTxgMAvow3nfB6XlvWB2"
     }
   ],
   "dashboardAdmin": [
