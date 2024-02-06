@@ -1,11 +1,12 @@
 import express from 'express';
-import { usersDeleteApplications, usersGetApplications, usersGetByIdApplications } from '../controllers/applicationsController';
+import { userGetApplications, userGetByIdApplications, userPostApplications, userDeleteApplications } from '../controllers/applicationsController';
 
 const applicationsRouter = express.Router();
 
-applicationsRouter.get('/applications/', usersGetApplications);
-applicationsRouter.get('/applications/:id', usersGetByIdApplications);
-applicationsRouter.delete('/applications/:id', usersDeleteApplications);
+applicationsRouter.get('/applicationsUser/', userGetApplications);
+applicationsRouter.get('/applicationsUser/:id', userGetByIdApplications);
+applicationsRouter.post('/applicationsUser/:id', userPostApplications);
+applicationsRouter.delete('/applicationsUser/:id', userDeleteApplications);
 
 //patch, post, delete, get
 

@@ -26,7 +26,7 @@ import { Request } from "express";
       Notifications_User: string;
       loginAttempts: number;
       TokenLogedUser: string;
-      ExpiryTokenDate: Date; // Use Date with uppercase D
+      ExpiryTokenDate: Date;
       Block_User: boolean;
       Delete_User: boolean;
     }
