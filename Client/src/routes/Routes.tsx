@@ -13,7 +13,7 @@ import Help from "../components/pages/User/Help";
 import HowUse from "../components/pages/User/HowUse";
 import UserProfile from "../components/pages/User/UserProfile";
 import ConnectedDevices from "../components/pages/User/ConnectedDevices";
-import React from "react";
+// import React from "react";
 import { servicesApp } from "../services/services";
 import TokenAccess from "../TokenAccess";
 import RecoverPasswordForm from "../components/pages/User/RecoverPasswordForm";

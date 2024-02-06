@@ -12,6 +12,7 @@ import { UserInterface } from '../interfaces/userInterface';
 export const usersGet = async (_req: Request, res: Response) => {
   try {
     const users = await UsersModel.findAll();
+    //Añadir validación de user, si no existe dar 400? o 404
     res.status(200).json(users);
   } catch (error) {
     if (error instanceof Error) {
